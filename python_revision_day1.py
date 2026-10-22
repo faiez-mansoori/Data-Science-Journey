@@ -5253,3 +5253,1209 @@ print("Name:", name)
 print("Topics: Loops, Strings, Lists")
 print("My goal is to become a Data Scientist")
 print("Keep learning Python every day!")
+
+# ==========================================
+# PYTHON STRING OPERATIONS PRACTICE PROJECT
+# Author: Faiez
+# Topic: Python Strings
+# ==========================================
+
+print("=" * 50)
+print("       PYTHON STRING OPERATIONS")
+print("=" * 50)
+
+# 1. Creating Strings
+name = "faiez mansoori"
+sentence = "i am learning python for data science"
+message = "   Welcome to my Python journey!   "
+
+print("\n1. ORIGINAL STRINGS")
+print("Name:", name)
+print("Sentence:", sentence)
+print("Message:", message)
+
+
+# 2. String Length
+print("\n2. STRING LENGTH")
+print("Length of name:", len(name))
+print("Length of sentence:", len(sentence))
+
+
+# 3. Uppercase and Lowercase
+print("\n3. CASE CONVERSION")
+print("Uppercase:", name.upper())
+print("Lowercase:", name.lower())
+print("Title Case:", name.title())
+print("Capitalize:", sentence.capitalize())
+print("Swap Case:", name.swapcase())
+
+
+# 4. Removing Spaces
+print("\n4. SPACE REMOVAL")
+print("Original:", repr(message))
+print("Strip:", message.strip())
+print("Left Strip:", message.lstrip())
+print("Right Strip:", message.rstrip())
+
+
+# 5. String Indexing
+print("\n5. STRING INDEXING")
+word = "PYTHON"
+
+print("First character:", word[0])
+print("Second character:", word[1])
+print("Last character:", word[-1])
+print("Second last character:", word[-2])
+
+
+# 6. String Slicing
+print("\n6. STRING SLICING")
+print("First three:", word[0:3])
+print("Last three:", word[3:6])
+print("Every second character:", word[::2])
+print("Reverse string:", word[::-1])
+
+
+# 7. Replacing Text
+print("\n7. REPLACE OPERATIONS")
+print(sentence.replace("python", "SQL"))
+print(sentence.replace("data science", "AI"))
+print("Replace first occurrence:",
+      "apple apple apple".replace("apple", "mango", 1))
+
+
+# 8. Finding Words
+print("\n8. SEARCH OPERATIONS")
+text = "python is easy and python is powerful"
+
+print("Find python:", text.find("python"))
+print("Find powerful:", text.find("powerful"))
+print("Find Java:", text.find("Java"))
+print("Index of easy:", text.index("easy"))
+print("Starts with python:", text.startswith("python"))
+print("Ends with powerful:", text.endswith("powerful"))
+
+
+# 9. Counting Characters and Words
+print("\n9. COUNTING OPERATIONS")
+print("Count python:", text.count("python"))
+print("Count letter o:", text.count("o"))
+print("Count spaces:", text.count(" "))
+
+
+# 10. Splitting Strings
+print("\n10. SPLIT OPERATIONS")
+skills = "Python,SQL,NumPy,Pandas,Machine Learning"
+
+skill_list = skills.split(",")
+
+print("Original skills:", skills)
+print("Skills list:", skill_list)
+print("First skill:", skill_list[0])
+print("Number of skills:", len(skill_list))
+
+
+# 11. Joining Strings
+print("\n11. JOIN OPERATIONS")
+print("With spaces:", " ".join(skill_list))
+print("With hyphens:", "-".join(skill_list))
+print("With arrows:", " -> ".join(skill_list))
+
+
+# 12. String Validation
+print("\n12. VALIDATION OPERATIONS")
+print("Is alphabetic:", "Faiez".isalpha())
+print("Is numeric:", "12345".isnumeric())
+print("Is alphanumeric:", "Faiez123".isalnum())
+print("Is lowercase:", "python".islower())
+print("Is uppercase:", "PYTHON".isupper())
+print("Is title case:", "Python Journey".istitle())
+print("Contains only spaces:", "   ".isspace())
+
+
+# 13. Checking Words
+print("\n13. WORD CHECKING")
+bio = "I am Faiez and I love Python"
+
+print("Python present:", "Python" in bio)
+print("Java present:", "Java" in bio)
+print("Faiez absent:", "Faiez" not in bio)
+
+
+# 14. String Concatenation
+print("\n14. STRING CONCATENATION")
+first_name = "Faiez"
+last_name = "Mansoori"
+
+full_name = first_name + " " + last_name
+
+print("Full name:", full_name)
+
+
+# 15. Repeating Strings
+print("\n15. STRING REPETITION")
+print("Python " * 3)
+print("*" * 30)
+print("Learn Python!" * 2)
+
+
+# 16. Escape Characters
+print("\n16. ESCAPE CHARACTERS")
+print("Hello\nFaiez")
+print("Python\tProgramming")
+print("He said, \"I will learn Python\"")
+print("C:\\Python\\Projects")
+
+
+# 17. f-Strings
+print("\n17. F-STRING FORMATTING")
+student_name = "Faiez"
+age = 18
+course = "AI and Data Science"
+progress = 75.5
+
+print(f"My name is {student_name}.")
+print(f"My age is {age}.")
+print(f"I am studying {course}.")
+print(f"My learning progress is {progress}%.")
+
+
+# 18. Formatting Text
+print("\n18. STRING FORMATTING")
+print("Name: {:>20}".format("Faiez"))
+print("Name: {:<20}".format("Faiez"))
+print("Name: {:^20}".format("Faiez"))
+
+
+# 19. Removing and Replacing Parts
+print("\n19. ADVANCED STRING METHODS")
+sample = "Python programming programming"
+
+print("Remove prefix:", "Python Developer".removeprefix("Python "))
+print("Remove suffix:", "report.txt".removesuffix(".txt"))
+print("Replace old text:", sample.replace("programming", "coding"))
+
+
+# 20. Checking Prefix and Suffix
+print("\n20. FILE NAME CHECK")
+file_name = "python_project.py"
+
+print("Python file:", file_name.endswith(".py"))
+print("Text file:", file_name.endswith(".txt"))
+
+
+# 21. Character-by-Character Loop
+print("\n21. PRINT EACH CHARACTER")
+for character in "PYTHON":
+    print(character)
+
+
+# 22. Counting Vowels
+print("\n22. COUNTING VOWELS")
+word = "data science"
+vowels = "aeiou"
+vowel_count = 0
+
+for character in word.lower():
+    if character in vowels:
+        vowel_count += 1
+
+print("Word:", word)
+print("Total vowels:", vowel_count)
+
+
+# 23. Counting Consonants
+print("\n23. COUNTING CONSONANTS")
+word = "python programming"
+consonant_count = 0
+
+for character in word.lower():
+    if character.isalpha() and character not in "aeiou":
+        consonant_count += 1
+
+print("Word:", word)
+print("Total consonants:", consonant_count)
+
+
+# 24. Reversing a String
+print("\n24. REVERSE STRING")
+original = "data science"
+reversed_text = original[::-1]
+
+print("Original:", original)
+print("Reversed:", reversed_text)
+
+
+# 25. Palindrome Checker
+print("\n25. PALINDROME CHECKER")
+palindrome_word = "madam"
+
+if palindrome_word == palindrome_word[::-1]:
+    print(palindrome_word, "is a palindrome")
+else:
+    print(palindrome_word, "is not a palindrome")
+
+
+# 26. Count Words in a Sentence
+print("\n26. WORD COUNTER")
+sentence = "I will become a data scientist"
+
+words = sentence.split()
+
+print("Sentence:", sentence)
+print("Words:", words)
+print("Total words:", len(words))
+
+
+# 27. Remove Extra Spaces
+print("\n27. CLEANING TEXT")
+messy_text = "   I   am   learning   Python   "
+
+clean_text = " ".join(messy_text.split())
+
+print("Before:", repr(messy_text))
+print("After:", clean_text)
+
+
+# 28. Character Frequency
+print("\n28. CHARACTER FREQUENCY")
+word = "banana"
+
+for character in set(word):
+    print(character, "=", word.count(character))
+
+
+# 29. Username Generator
+print("\n29. USERNAME GENERATOR")
+user_first_name = "Faiez"
+user_last_name = "Mansoori"
+user_number = "123"
+
+username = (
+    user_first_name.lower()
+    + user_last_name.lower()
+    + user_number
+)
+
+print("Generated username:", username)
+
+
+# 30. Final Profile
+print("\n" + "=" * 50)
+print("           MY PYTHON PROFILE")
+print("=" * 50)
+
+profile_name = "Faiez Mansoori"
+profile_skill = "Python, SQL, Machine Learning"
+profile_goal = "Become a Data Scientist"
+
+print(f"Name       : {profile_name.title()}")
+print(f"Skills     : {profile_skill}")
+print(f"Career Goal: {profile_goal.upper()}")
+print("Status     : Learning Every Day!")
+print("=" * 50)
+
+
+# ==========================================
+# PYTHON STRING OPERATIONS PRACTICE PROJECT
+# Author: Faiez
+# Topic: Python Strings
+# ==========================================
+
+print("=" * 50)
+print("       PYTHON STRING OPERATIONS")
+print("=" * 50)
+
+# 1. Creating Strings
+name = "faiez mansoori"
+sentence = "i am learning python for data science"
+message = "   Welcome to my Python journey!   "
+
+print("\n1. ORIGINAL STRINGS")
+print("Name:", name)
+print("Sentence:", sentence)
+print("Message:", message)
+
+
+# 2. String Length
+print("\n2. STRING LENGTH")
+print("Length of name:", len(name))
+print("Length of sentence:", len(sentence))
+
+
+# 3. Uppercase and Lowercase
+print("\n3. CASE CONVERSION")
+print("Uppercase:", name.upper())
+print("Lowercase:", name.lower())
+print("Title Case:", name.title())
+print("Capitalize:", sentence.capitalize())
+print("Swap Case:", name.swapcase())
+
+
+# 4. Removing Spaces
+print("\n4. SPACE REMOVAL")
+print("Original:", repr(message))
+print("Strip:", message.strip())
+print("Left Strip:", message.lstrip())
+print("Right Strip:", message.rstrip())
+
+
+# 5. String Indexing
+print("\n5. STRING INDEXING")
+word = "PYTHON"
+
+print("First character:", word[0])
+print("Second character:", word[1])
+print("Last character:", word[-1])
+print("Second last character:", word[-2])
+
+
+# 6. String Slicing
+print("\n6. STRING SLICING")
+print("First three:", word[0:3])
+print("Last three:", word[3:6])
+print("Every second character:", word[::2])
+print("Reverse string:", word[::-1])
+
+
+# 7. Replacing Text
+print("\n7. REPLACE OPERATIONS")
+print(sentence.replace("python", "SQL"))
+print(sentence.replace("data science", "AI"))
+print("Replace first occurrence:",
+      "apple apple apple".replace("apple", "mango", 1))
+
+
+# 8. Finding Words
+print("\n8. SEARCH OPERATIONS")
+text = "python is easy and python is powerful"
+
+print("Find python:", text.find("python"))
+print("Find powerful:", text.find("powerful"))
+print("Find Java:", text.find("Java"))
+print("Index of easy:", text.index("easy"))
+print("Starts with python:", text.startswith("python"))
+print("Ends with powerful:", text.endswith("powerful"))
+
+
+# 9. Counting Characters and Words
+print("\n9. COUNTING OPERATIONS")
+print("Count python:", text.count("python"))
+print("Count letter o:", text.count("o"))
+print("Count spaces:", text.count(" "))
+
+
+# 10. Splitting Strings
+print("\n10. SPLIT OPERATIONS")
+skills = "Python,SQL,NumPy,Pandas,Machine Learning"
+
+skill_list = skills.split(",")
+
+print("Original skills:", skills)
+print("Skills list:", skill_list)
+print("First skill:", skill_list[0])
+print("Number of skills:", len(skill_list))
+
+
+# 11. Joining Strings
+print("\n11. JOIN OPERATIONS")
+print("With spaces:", " ".join(skill_list))
+print("With hyphens:", "-".join(skill_list))
+print("With arrows:", " -> ".join(skill_list))
+
+
+# 12. String Validation
+print("\n12. VALIDATION OPERATIONS")
+print("Is alphabetic:", "Faiez".isalpha())
+print("Is numeric:", "12345".isnumeric())
+print("Is alphanumeric:", "Faiez123".isalnum())
+print("Is lowercase:", "python".islower())
+print("Is uppercase:", "PYTHON".isupper())
+print("Is title case:", "Python Journey".istitle())
+print("Contains only spaces:", "   ".isspace())
+
+
+# 13. Checking Words
+print("\n13. WORD CHECKING")
+bio = "I am Faiez and I love Python"
+
+print("Python present:", "Python" in bio)
+print("Java present:", "Java" in bio)
+print("Faiez absent:", "Faiez" not in bio)
+
+
+# 14. String Concatenation
+print("\n14. STRING CONCATENATION")
+first_name = "Faiez"
+last_name = "Mansoori"
+
+full_name = first_name + " " + last_name
+
+print("Full name:", full_name)
+
+
+# 15. Repeating Strings
+print("\n15. STRING REPETITION")
+print("Python " * 3)
+print("*" * 30)
+print("Learn Python!" * 2)
+
+
+# 16. Escape Characters
+print("\n16. ESCAPE CHARACTERS")
+print("Hello\nFaiez")
+print("Python\tProgramming")
+print("He said, \"I will learn Python\"")
+print("C:\\Python\\Projects")
+
+
+# 17. f-Strings
+print("\n17. F-STRING FORMATTING")
+student_name = "Faiez"
+age = 18
+course = "AI and Data Science"
+progress = 75.5
+
+print(f"My name is {student_name}.")
+print(f"My age is {age}.")
+print(f"I am studying {course}.")
+print(f"My learning progress is {progress}%.")
+
+
+# 18. Formatting Text
+print("\n18. STRING FORMATTING")
+print("Name: {:>20}".format("Faiez"))
+print("Name: {:<20}".format("Faiez"))
+print("Name: {:^20}".format("Faiez"))
+
+
+# 19. Removing and Replacing Parts
+print("\n19. ADVANCED STRING METHODS")
+sample = "Python programming programming"
+
+print("Remove prefix:", "Python Developer".removeprefix("Python "))
+print("Remove suffix:", "report.txt".removesuffix(".txt"))
+print("Replace old text:", sample.replace("programming", "coding"))
+
+
+# 20. Checking Prefix and Suffix
+print("\n20. FILE NAME CHECK")
+file_name = "python_project.py"
+
+print("Python file:", file_name.endswith(".py"))
+print("Text file:", file_name.endswith(".txt"))
+
+
+# 21. Character-by-Character Loop
+print("\n21. PRINT EACH CHARACTER")
+for character in "PYTHON":
+    print(character)
+
+
+# 22. Counting Vowels
+print("\n22. COUNTING VOWELS")
+word = "data science"
+vowels = "aeiou"
+vowel_count = 0
+
+for character in word.lower():
+    if character in vowels:
+        vowel_count += 1
+
+print("Word:", word)
+print("Total vowels:", vowel_count)
+
+
+# 23. Counting Consonants
+print("\n23. COUNTING CONSONANTS")
+word = "python programming"
+consonant_count = 0
+
+for character in word.lower():
+    if character.isalpha() and character not in "aeiou":
+        consonant_count += 1
+
+print("Word:", word)
+print("Total consonants:", consonant_count)
+
+
+# 24. Reversing a String
+print("\n24. REVERSE STRING")
+original = "data science"
+reversed_text = original[::-1]
+
+print("Original:", original)
+print("Reversed:", reversed_text)
+
+
+# 25. Palindrome Checker
+print("\n25. PALINDROME CHECKER")
+palindrome_word = "madam"
+
+if palindrome_word == palindrome_word[::-1]:
+    print(palindrome_word, "is a palindrome")
+else:
+    print(palindrome_word, "is not a palindrome")
+
+
+# 26. Count Words in a Sentence
+print("\n26. WORD COUNTER")
+sentence = "I will become a data scientist"
+
+words = sentence.split()
+
+print("Sentence:", sentence)
+print("Words:", words)
+print("Total words:", len(words))
+
+
+# 27. Remove Extra Spaces
+print("\n27. CLEANING TEXT")
+messy_text = "   I   am   learning   Python   "
+
+clean_text = " ".join(messy_text.split())
+
+print("Before:", repr(messy_text))
+print("After:", clean_text)
+
+
+# 28. Character Frequency
+print("\n28. CHARACTER FREQUENCY")
+word = "banana"
+
+for character in set(word):
+    print(character, "=", word.count(character))
+
+
+# 29. Username Generator
+print("\n29. USERNAME GENERATOR")
+user_first_name = "Faiez"
+user_last_name = "Mansoori"
+user_number = "123"
+
+username = (
+    user_first_name.lower()
+    + user_last_name.lower()
+    + user_number
+)
+
+print("Generated username:", username)
+
+
+# 30. Final Profile
+print("\n" + "=" * 50)
+print("           MY PYTHON PROFILE")
+print("=" * 50)
+
+profile_name = "Faiez Mansoori"
+profile_skill = "Python, SQL, Machine Learning"
+profile_goal = "Become a Data Scientist"
+
+print(f"Name       : {profile_name.title()}")
+print(f"Skills     : {profile_skill}")
+print(f"Career Goal: {profile_goal.upper()}")
+print("Status     : Learning Every Day!")
+print("=" * 50)
+
+# ==========================================
+# PYTHON STRING OPERATIONS PRACTICE PROJECT
+# Author: Faiez
+# Topic: Python Strings
+# ==========================================
+
+print("=" * 50)
+print("       PYTHON STRING OPERATIONS")
+print("=" * 50)
+
+# 1. Creating Strings
+name = "faiez mansoori"
+sentence = "i am learning python for data science"
+message = "   Welcome to my Python journey!   "
+
+print("\n1. ORIGINAL STRINGS")
+print("Name:", name)
+print("Sentence:", sentence)
+print("Message:", message)
+
+
+# 2. String Length
+print("\n2. STRING LENGTH")
+print("Length of name:", len(name))
+print("Length of sentence:", len(sentence))
+
+
+# 3. Uppercase and Lowercase
+print("\n3. CASE CONVERSION")
+print("Uppercase:", name.upper())
+print("Lowercase:", name.lower())
+print("Title Case:", name.title())
+print("Capitalize:", sentence.capitalize())
+print("Swap Case:", name.swapcase())
+
+
+# 4. Removing Spaces
+print("\n4. SPACE REMOVAL")
+print("Original:", repr(message))
+print("Strip:", message.strip())
+print("Left Strip:", message.lstrip())
+print("Right Strip:", message.rstrip())
+
+
+# 5. String Indexing
+print("\n5. STRING INDEXING")
+word = "PYTHON"
+
+print("First character:", word[0])
+print("Second character:", word[1])
+print("Last character:", word[-1])
+print("Second last character:", word[-2])
+
+
+# 6. String Slicing
+print("\n6. STRING SLICING")
+print("First three:", word[0:3])
+print("Last three:", word[3:6])
+print("Every second character:", word[::2])
+print("Reverse string:", word[::-1])
+
+
+# 7. Replacing Text
+print("\n7. REPLACE OPERATIONS")
+print(sentence.replace("python", "SQL"))
+print(sentence.replace("data science", "AI"))
+print("Replace first occurrence:",
+      "apple apple apple".replace("apple", "mango", 1))
+
+
+# 8. Finding Words
+print("\n8. SEARCH OPERATIONS")
+text = "python is easy and python is powerful"
+
+print("Find python:", text.find("python"))
+print("Find powerful:", text.find("powerful"))
+print("Find Java:", text.find("Java"))
+print("Index of easy:", text.index("easy"))
+print("Starts with python:", text.startswith("python"))
+print("Ends with powerful:", text.endswith("powerful"))
+
+
+# 9. Counting Characters and Words
+print("\n9. COUNTING OPERATIONS")
+print("Count python:", text.count("python"))
+print("Count letter o:", text.count("o"))
+print("Count spaces:", text.count(" "))
+
+
+# 10. Splitting Strings
+print("\n10. SPLIT OPERATIONS")
+skills = "Python,SQL,NumPy,Pandas,Machine Learning"
+
+skill_list = skills.split(",")
+
+print("Original skills:", skills)
+print("Skills list:", skill_list)
+print("First skill:", skill_list[0])
+print("Number of skills:", len(skill_list))
+
+
+# 11. Joining Strings
+print("\n11. JOIN OPERATIONS")
+print("With spaces:", " ".join(skill_list))
+print("With hyphens:", "-".join(skill_list))
+print("With arrows:", " -> ".join(skill_list))
+
+
+# 12. String Validation
+print("\n12. VALIDATION OPERATIONS")
+print("Is alphabetic:", "Faiez".isalpha())
+print("Is numeric:", "12345".isnumeric())
+print("Is alphanumeric:", "Faiez123".isalnum())
+print("Is lowercase:", "python".islower())
+print("Is uppercase:", "PYTHON".isupper())
+print("Is title case:", "Python Journey".istitle())
+print("Contains only spaces:", "   ".isspace())
+
+
+# 13. Checking Words
+print("\n13. WORD CHECKING")
+bio = "I am Faiez and I love Python"
+
+print("Python present:", "Python" in bio)
+print("Java present:", "Java" in bio)
+print("Faiez absent:", "Faiez" not in bio)
+
+
+# 14. String Concatenation
+print("\n14. STRING CONCATENATION")
+first_name = "Faiez"
+last_name = "Mansoori"
+
+full_name = first_name + " " + last_name
+
+print("Full name:", full_name)
+
+
+# 15. Repeating Strings
+print("\n15. STRING REPETITION")
+print("Python " * 3)
+print("*" * 30)
+print("Learn Python!" * 2)
+
+
+# 16. Escape Characters
+print("\n16. ESCAPE CHARACTERS")
+print("Hello\nFaiez")
+print("Python\tProgramming")
+print("He said, \"I will learn Python\"")
+print("C:\\Python\\Projects")
+
+
+# 17. f-Strings
+print("\n17. F-STRING FORMATTING")
+student_name = "Faiez"
+age = 18
+course = "AI and Data Science"
+progress = 75.5
+
+print(f"My name is {student_name}.")
+print(f"My age is {age}.")
+print(f"I am studying {course}.")
+print(f"My learning progress is {progress}%.")
+
+
+# 18. Formatting Text
+print("\n18. STRING FORMATTING")
+print("Name: {:>20}".format("Faiez"))
+print("Name: {:<20}".format("Faiez"))
+print("Name: {:^20}".format("Faiez"))
+
+
+# 19. Removing and Replacing Parts
+print("\n19. ADVANCED STRING METHODS")
+sample = "Python programming programming"
+
+print("Remove prefix:", "Python Developer".removeprefix("Python "))
+print("Remove suffix:", "report.txt".removesuffix(".txt"))
+print("Replace old text:", sample.replace("programming", "coding"))
+
+
+# 20. Checking Prefix and Suffix
+print("\n20. FILE NAME CHECK")
+file_name = "python_project.py"
+
+print("Python file:", file_name.endswith(".py"))
+print("Text file:", file_name.endswith(".txt"))
+
+
+# 21. Character-by-Character Loop
+print("\n21. PRINT EACH CHARACTER")
+for character in "PYTHON":
+    print(character)
+
+
+# 22. Counting Vowels
+print("\n22. COUNTING VOWELS")
+word = "data science"
+vowels = "aeiou"
+vowel_count = 0
+
+for character in word.lower():
+    if character in vowels:
+        vowel_count += 1
+
+print("Word:", word)
+print("Total vowels:", vowel_count)
+
+
+# 23. Counting Consonants
+print("\n23. COUNTING CONSONANTS")
+word = "python programming"
+consonant_count = 0
+
+for character in word.lower():
+    if character.isalpha() and character not in "aeiou":
+        consonant_count += 1
+
+print("Word:", word)
+print("Total consonants:", consonant_count)
+
+
+# 24. Reversing a String
+print("\n24. REVERSE STRING")
+original = "data science"
+reversed_text = original[::-1]
+
+print("Original:", original)
+print("Reversed:", reversed_text)
+
+
+# 25. Palindrome Checker
+print("\n25. PALINDROME CHECKER")
+palindrome_word = "madam"
+
+if palindrome_word == palindrome_word[::-1]:
+    print(palindrome_word, "is a palindrome")
+else:
+    print(palindrome_word, "is not a palindrome")
+
+
+# 26. Count Words in a Sentence
+print("\n26. WORD COUNTER")
+sentence = "I will become a data scientist"
+
+words = sentence.split()
+
+print("Sentence:", sentence)
+print("Words:", words)
+print("Total words:", len(words))
+
+
+# 27. Remove Extra Spaces
+print("\n27. CLEANING TEXT")
+messy_text = "   I   am   learning   Python   "
+
+clean_text = " ".join(messy_text.split())
+
+print("Before:", repr(messy_text))
+print("After:", clean_text)
+
+
+# 28. Character Frequency
+print("\n28. CHARACTER FREQUENCY")
+word = "banana"
+
+for character in set(word):
+    print(character, "=", word.count(character))
+
+
+# 29. Username Generator
+print("\n29. USERNAME GENERATOR")
+user_first_name = "Faiez"
+user_last_name = "Mansoori"
+user_number = "123"
+
+username = (
+    user_first_name.lower()
+    + user_last_name.lower()
+    + user_number
+)
+
+print("Generated username:", username)
+
+
+# 30. Final Profile
+print("\n" + "=" * 50)
+print("           MY PYTHON PROFILE")
+print("=" * 50)
+
+profile_name = "Faiez Mansoori"
+profile_skill = "Python, SQL, Machine Learning"
+profile_goal = "Become a Data Scientist"
+
+print(f"Name       : {profile_name.title()}")
+print(f"Skills     : {profile_skill}")
+print(f"Career Goal: {profile_goal.upper()}")
+print("Status     : Learning Every Day!")
+print("=" * 50)
+
+
+# ==========================================
+# PYTHON STRING OPERATIONS PRACTICE PROJECT
+# Author: Faiez
+# Topic: Python Strings
+# ==========================================
+
+print("=" * 50)
+print("       PYTHON STRING OPERATIONS")
+print("=" * 50)
+
+# 1. Creating Strings
+name = "faiez mansoori"
+sentence = "i am learning python for data science"
+message = "   Welcome to my Python journey!   "
+
+print("\n1. ORIGINAL STRINGS")
+print("Name:", name)
+print("Sentence:", sentence)
+print("Message:", message)
+
+
+# 2. String Length
+print("\n2. STRING LENGTH")
+print("Length of name:", len(name))
+print("Length of sentence:", len(sentence))
+
+
+# 3. Uppercase and Lowercase
+print("\n3. CASE CONVERSION")
+print("Uppercase:", name.upper())
+print("Lowercase:", name.lower())
+print("Title Case:", name.title())
+print("Capitalize:", sentence.capitalize())
+print("Swap Case:", name.swapcase())
+
+
+# 4. Removing Spaces
+print("\n4. SPACE REMOVAL")
+print("Original:", repr(message))
+print("Strip:", message.strip())
+print("Left Strip:", message.lstrip())
+print("Right Strip:", message.rstrip())
+
+
+# 5. String Indexing
+print("\n5. STRING INDEXING")
+word = "PYTHON"
+
+print("First character:", word[0])
+print("Second character:", word[1])
+print("Last character:", word[-1])
+print("Second last character:", word[-2])
+
+
+# 6. String Slicing
+print("\n6. STRING SLICING")
+print("First three:", word[0:3])
+print("Last three:", word[3:6])
+print("Every second character:", word[::2])
+print("Reverse string:", word[::-1])
+
+
+# 7. Replacing Text
+print("\n7. REPLACE OPERATIONS")
+print(sentence.replace("python", "SQL"))
+print(sentence.replace("data science", "AI"))
+print("Replace first occurrence:",
+      "apple apple apple".replace("apple", "mango", 1))
+
+
+# 8. Finding Words
+print("\n8. SEARCH OPERATIONS")
+text = "python is easy and python is powerful"
+
+print("Find python:", text.find("python"))
+print("Find powerful:", text.find("powerful"))
+print("Find Java:", text.find("Java"))
+print("Index of easy:", text.index("easy"))
+print("Starts with python:", text.startswith("python"))
+print("Ends with powerful:", text.endswith("powerful"))
+
+
+# 9. Counting Characters and Words
+print("\n9. COUNTING OPERATIONS")
+print("Count python:", text.count("python"))
+print("Count letter o:", text.count("o"))
+print("Count spaces:", text.count(" "))
+
+
+# 10. Splitting Strings
+print("\n10. SPLIT OPERATIONS")
+skills = "Python,SQL,NumPy,Pandas,Machine Learning"
+
+skill_list = skills.split(",")
+
+print("Original skills:", skills)
+print("Skills list:", skill_list)
+print("First skill:", skill_list[0])
+print("Number of skills:", len(skill_list))
+
+
+# 11. Joining Strings
+print("\n11. JOIN OPERATIONS")
+print("With spaces:", " ".join(skill_list))
+print("With hyphens:", "-".join(skill_list))
+print("With arrows:", " -> ".join(skill_list))
+
+
+# 12. String Validation
+print("\n12. VALIDATION OPERATIONS")
+print("Is alphabetic:", "Faiez".isalpha())
+print("Is numeric:", "12345".isnumeric())
+print("Is alphanumeric:", "Faiez123".isalnum())
+print("Is lowercase:", "python".islower())
+print("Is uppercase:", "PYTHON".isupper())
+print("Is title case:", "Python Journey".istitle())
+print("Contains only spaces:", "   ".isspace())
+
+
+# 13. Checking Words
+print("\n13. WORD CHECKING")
+bio = "I am Faiez and I love Python"
+
+print("Python present:", "Python" in bio)
+print("Java present:", "Java" in bio)
+print("Faiez absent:", "Faiez" not in bio)
+
+
+# 14. String Concatenation
+print("\n14. STRING CONCATENATION")
+first_name = "Faiez"
+last_name = "Mansoori"
+
+full_name = first_name + " " + last_name
+
+print("Full name:", full_name)
+
+
+# 15. Repeating Strings
+print("\n15. STRING REPETITION")
+print("Python " * 3)
+print("*" * 30)
+print("Learn Python!" * 2)
+
+
+# 16. Escape Characters
+print("\n16. ESCAPE CHARACTERS")
+print("Hello\nFaiez")
+print("Python\tProgramming")
+print("He said, \"I will learn Python\"")
+print("C:\\Python\\Projects")
+
+
+# 17. f-Strings
+print("\n17. F-STRING FORMATTING")
+student_name = "Faiez"
+age = 18
+course = "AI and Data Science"
+progress = 75.5
+
+print(f"My name is {student_name}.")
+print(f"My age is {age}.")
+print(f"I am studying {course}.")
+print(f"My learning progress is {progress}%.")
+
+
+# 18. Formatting Text
+print("\n18. STRING FORMATTING")
+print("Name: {:>20}".format("Faiez"))
+print("Name: {:<20}".format("Faiez"))
+print("Name: {:^20}".format("Faiez"))
+
+
+# 19. Removing and Replacing Parts
+print("\n19. ADVANCED STRING METHODS")
+sample = "Python programming programming"
+
+print("Remove prefix:", "Python Developer".removeprefix("Python "))
+print("Remove suffix:", "report.txt".removesuffix(".txt"))
+print("Replace old text:", sample.replace("programming", "coding"))
+
+
+# 20. Checking Prefix and Suffix
+print("\n20. FILE NAME CHECK")
+file_name = "python_project.py"
+
+print("Python file:", file_name.endswith(".py"))
+print("Text file:", file_name.endswith(".txt"))
+
+
+# 21. Character-by-Character Loop
+print("\n21. PRINT EACH CHARACTER")
+for character in "PYTHON":
+    print(character)
+
+
+# 22. Counting Vowels
+print("\n22. COUNTING VOWELS")
+word = "data science"
+vowels = "aeiou"
+vowel_count = 0
+
+for character in word.lower():
+    if character in vowels:
+        vowel_count += 1
+
+print("Word:", word)
+print("Total vowels:", vowel_count)
+
+
+# 23. Counting Consonants
+print("\n23. COUNTING CONSONANTS")
+word = "python programming"
+consonant_count = 0
+
+for character in word.lower():
+    if character.isalpha() and character not in "aeiou":
+        consonant_count += 1
+
+print("Word:", word)
+print("Total consonants:", consonant_count)
+
+
+# 24. Reversing a String
+print("\n24. REVERSE STRING")
+original = "data science"
+reversed_text = original[::-1]
+
+print("Original:", original)
+print("Reversed:", reversed_text)
+
+
+# 25. Palindrome Checker
+print("\n25. PALINDROME CHECKER")
+palindrome_word = "madam"
+
+if palindrome_word == palindrome_word[::-1]:
+    print(palindrome_word, "is a palindrome")
+else:
+    print(palindrome_word, "is not a palindrome")
+
+
+# 26. Count Words in a Sentence
+print("\n26. WORD COUNTER")
+sentence = "I will become a data scientist"
+
+words = sentence.split()
+
+print("Sentence:", sentence)
+print("Words:", words)
+print("Total words:", len(words))
+
+
+# 27. Remove Extra Spaces
+print("\n27. CLEANING TEXT")
+messy_text = "   I   am   learning   Python   "
+
+clean_text = " ".join(messy_text.split())
+
+print("Before:", repr(messy_text))
+print("After:", clean_text)
+
+
+# 28. Character Frequency
+print("\n28. CHARACTER FREQUENCY")
+word = "banana"
+
+for character in set(word):
+    print(character, "=", word.count(character))
+
+
+# 29. Username Generator
+print("\n29. USERNAME GENERATOR")
+user_first_name = "Faiez"
+user_last_name = "Mansoori"
+user_number = "123"
+
+username = (
+    user_first_name.lower()
+    + user_last_name.lower()
+    + user_number
+)
+
+print("Generated username:", username)
+
+
+# 30. Final Profile
+print("\n" + "=" * 50)
+print("           MY PYTHON PROFILE")
+print("=" * 50)
+
+profile_name = "Faiez Mansoori"
+profile_skill = "Python, SQL, Machine Learning"
+profile_goal = "Become a Data Scientist"
+
+print(f"Name       : {profile_name.title()}")
+print(f"Skills     : {profile_skill}")
+print(f"Career Goal: {profile_goal.upper()}")
+print("Status     : Learning Every Day!")
+print("=" * 5
