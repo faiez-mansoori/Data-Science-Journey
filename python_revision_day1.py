@@ -4914,3 +4914,342 @@
  "nbformat": 4,
  "nbformat_minor": 5
 }
+# My Python Practice Project
+# Name: Faiez
+# Topic: Loops to Lists
+
+print("================================")
+print("   MY PYTHON PRACTICE PROJECT")
+print("================================")
+
+name = "Faiez"
+age = 18
+
+print("My name is", name)
+print("My age is", age)
+print("I will become a Data Scientist")
+
+
+# 1. FOR LOOP
+
+print("\n--- FOR LOOP ---")
+
+for i in range(1, 11):
+    print("Number:", i)
+
+
+# 2. EVEN NUMBERS
+
+print("\n--- EVEN NUMBERS ---")
+
+for i in range(1, 21):
+    if i % 2 == 0:
+        print(i)
+
+
+# 3. ODD NUMBERS
+
+print("\n--- ODD NUMBERS ---")
+
+for i in range(1, 21):
+    if i % 2 != 0:
+        print(i)
+
+
+# 4. WHILE LOOP
+
+print("\n--- WHILE LOOP ---")
+
+i = 10
+
+while i >= 1:
+    print(i)
+    i -= 1
+
+print("Countdown finished!")
+
+
+# 5. SUM OF NUMBERS
+
+print("\n--- SUM OF NUMBERS ---")
+
+total = 0
+
+for i in range(1, 51):
+    total = total + i
+
+print("Total is:", total)
+
+
+# 6. MULTIPLICATION TABLE
+
+print("\n--- MULTIPLICATION TABLE ---")
+
+number = 7
+
+for i in range(1, 11):
+    print(number, "x", i, "=", number * i)
+
+
+# 7. POSITIVE OR NEGATIVE
+
+print("\n--- POSITIVE OR NEGATIVE ---")
+
+numbers = [10, -5, 20, -8, 0, 15, -2]
+
+for num in numbers:
+    if num > 0:
+        print(num, "is positive")
+    elif num < 0:
+        print(num, "is negative")
+    else:
+        print(num, "is zero")
+
+
+# 8. STRING PRACTICE
+
+print("\n--- STRING PRACTICE ---")
+
+my_name = "Faiez Mansoori"
+
+print("My name:", my_name)
+print("Length:", len(my_name))
+print("Uppercase:", my_name.upper())
+print("Lowercase:", my_name.lower())
+print("First letter:", my_name[0])
+print("Last letter:", my_name[-1])
+
+
+# 9. PRINT EVERY CHARACTER
+
+print("\n--- STRING LOOP ---")
+
+word = "PYTHON"
+
+for letter in word:
+    print(letter)
+
+
+# 10. COUNT VOWELS
+
+print("\n--- COUNT VOWELS ---")
+
+word = "data science"
+count = 0
+
+for letter in word:
+    if letter in "aeiou":
+        count += 1
+
+print("Total vowels:", count)
+
+
+# 11. LIST PRACTICE
+
+print("\n--- LIST PRACTICE ---")
+
+marks = [85, 72, 90, 65, 95]
+
+print("My marks:", marks)
+print("First mark:", marks[0])
+print("Last mark:", marks[-1])
+print("Total marks:", sum(marks))
+print("Highest marks:", max(marks))
+print("Lowest marks:", min(marks))
+print("Length of list:", len(marks))
+
+
+# 12. ADD AND REMOVE ITEMS
+
+print("\n--- LIST METHODS ---")
+
+fruits = ["apple", "banana", "mango"]
+
+print("Original list:", fruits)
+
+fruits.append("orange")
+print("After append:", fruits)
+
+fruits.insert(1, "grapes")
+print("After insert:", fruits)
+
+fruits.remove("banana")
+print("After remove:", fruits)
+
+
+# 13. LOOP THROUGH LIST
+
+print("\n--- MY FRIENDS ---")
+
+friends = ["Rahul", "Aman", "Ali", "Faiez"]
+
+for friend in friends:
+    print("My friend is", friend)
+
+
+# 14. FIND EVEN NUMBERS IN LIST
+
+print("\n--- EVEN NUMBERS FROM LIST ---")
+
+numbers = [12, 45, 23, 68, 90, 31, 44, 17]
+
+for num in numbers:
+    if num % 2 == 0:
+        print(num)
+
+
+# 15. FIND ODD NUMBERS IN LIST
+
+print("\n--- ODD NUMBERS FROM LIST ---")
+
+for num in numbers:
+    if num % 2 != 0:
+        print(num)
+
+
+# 16. TOTAL AND AVERAGE OF MARKS
+
+print("\n--- STUDENT MARKS ---")
+
+marks = [78, 85, 92, 67, 88]
+
+total = 0
+
+for mark in marks:
+    total += mark
+
+average = total / len(marks)
+
+print("All marks:", marks)
+print("Total:", total)
+print("Average:", average)
+
+
+# 17. PASS OR FAIL
+
+print("\n--- RESULT CHECK ---")
+
+marks = [85, 32, 76, 25, 90, 45]
+
+for mark in marks:
+    if mark >= 33:
+        print(mark, "Pass")
+    else:
+        print(mark, "Fail")
+
+
+# 18. FIND STUDENTS WITH HIGH MARKS
+
+print("\n--- TOP STUDENTS ---")
+
+students = ["Faiez", "Rahul", "Aman", "Ali"]
+marks = [85, 72, 95, 60]
+
+for i in range(len(students)):
+    if marks[i] >= 80:
+        print(students[i], "scored", marks[i])
+
+
+# 19. FIND MAXIMUM NUMBER USING LOOP
+
+print("\n--- FIND MAXIMUM ---")
+
+numbers = [12, 45, 89, 23, 67]
+
+largest = numbers[0]
+
+for num in numbers:
+    if num > largest:
+        largest = num
+
+print("Largest number:", largest)
+
+
+# 20. REVERSE A LIST USING LOOP
+
+print("\n--- REVERSE LIST ---")
+
+numbers = [1, 2, 3, 4, 5]
+reverse_list = []
+
+for num in numbers:
+    reverse_list.insert(0, num)
+
+print("Original list:", numbers)
+print("Reverse list:", reverse_list)
+
+
+# 21. NESTED LIST
+
+print("\n--- STUDENT DETAILS ---")
+
+students = [
+    ["Faiez", 85],
+    ["Rahul", 72],
+    ["Aman", 90],
+    ["Ali", 65]
+]
+
+for student in students:
+    print("Name:", student[0])
+    print("Marks:", student[1])
+    print("----------------")
+
+
+# 22. COUNT ITEMS IN LIST
+
+print("\n--- COUNT ITEMS ---")
+
+numbers = [10, 20, 10, 30, 10, 40, 20]
+count = 0
+
+for num in numbers:
+    if num == 10:
+        count += 1
+
+print("Number 10 appears:", count, "times")
+
+
+# 23. SEARCH A NAME
+
+print("\n--- SEARCH STUDENT ---")
+
+students = ["Faiez", "Rahul", "Aman", "Ali"]
+search_name = "Faiez"
+found = False
+
+for student in students:
+    if student == search_name:
+        found = True
+        break
+
+if found:
+    print(search_name, "found in the list")
+else:
+    print(search_name, "not found")
+
+
+# 24. SIMPLE SHOPPING LIST
+
+print("\n--- SHOPPING LIST ---")
+
+shopping = ["milk", "bread", "rice", "eggs"]
+
+for item in shopping:
+    print("I need to buy:", item)
+
+shopping.append("fruits")
+
+print("Updated shopping list:", shopping)
+
+
+# 25. FINAL SUMMARY
+
+print("\n================================")
+print("      REVISION COMPLETED")
+print("================================")
+
+print("Name:", name)
+print("Topics: Loops, Strings, Lists")
+print("My goal is to become a Data Scientist")
+print("Keep learning Python every day!")
