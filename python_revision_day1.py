@@ -6459,3 +6459,167 @@ print(f"Skills     : {profile_skill}")
 print(f"Career Goal: {profile_goal.upper()}")
 print("Status     : Learning Every Day!")
 print("=" * 5
+
+# ==========================================
+# PYTHON LISTS - COMPLETE PRACTICE
+# ==========================================
+
+print("===== PYTHON LISTS PRACTICE =====")
+
+# 1. Creating Lists
+names = ["Faiez", "Rahul", "Aman", "Ali"]
+marks = [85, 72, 90, 65, 95]
+subjects = ["Python", "SQL", "Statistics"]
+mixed_list = ["Faiez", 18, 85.5, True]
+
+print("\n1. Names:", names)
+print("Marks:", marks)
+print("Subjects:", subjects)
+print("Mixed List:", mixed_list)
+
+# 2. Accessing List Elements
+print("\n2. First Name:", names[0])
+print("Second Name:", names[1])
+print("Last Name:", names[-1])
+
+# 3. List Slicing
+print("\n3. First Three Names:", names[0:3])
+print("Names from Index 1:", names[1:])
+print("Last Two Names:", names[-2:])
+
+# 4. Updating List Elements
+names[1] = "Rohit"
+print("\n4. Updated Names:", names)
+
+# 5. Adding Elements
+names.append("Mohit")
+print("\n5. After Append:", names)
+
+names.insert(1, "Vikas")
+print("After Insert:", names)
+
+# 6. Adding Multiple Elements
+names.extend(["Sahil", "Arjun"])
+print("\n6. After Extend:", names)
+
+# 7. Removing Elements
+names.remove("Vikas")
+print("\n7. After Remove:", names)
+
+removed_name = names.pop()
+print("Removed Name:", removed_name)
+print("After Pop:", names)
+
+# 8. Length of List
+print("\n8. Total Names:", len(names))
+
+# 9. Searching in List
+if "Faiez" in names:
+    print("\n9. Faiez is present in the list")
+else:
+    print("\n9. Faiez is not present")
+
+# 10. Loop Through a List
+print("\n10. All Names:")
+for name in names:
+    print(name)
+
+# 11. Marks Operations
+print("\n11. All Marks:", marks)
+print("Highest Marks:", max(marks))
+print("Lowest Marks:", min(marks))
+print("Total Marks:", sum(marks))
+print("Average Marks:", sum(marks) / len(marks))
+
+# 12. Sorting Lists
+marks.sort()
+print("\n12. Ascending Marks:", marks)
+
+marks.sort(reverse=True)
+print("Descending Marks:", marks)
+
+# 13. Counting and Finding Index
+numbers = [10, 20, 10, 30, 10, 40]
+
+print("\n13. Numbers:", numbers)
+print("10 Appears:", numbers.count(10), "times")
+print("Index of 30:", numbers.index(30))
+
+# 14. Even and Odd Numbers
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+even_numbers = []
+odd_numbers = []
+
+for number in numbers:
+    if number % 2 == 0:
+        even_numbers.append(number)
+    else:
+        odd_numbers.append(number)
+
+print("\n14. Even Numbers:", even_numbers)
+print("Odd Numbers:", odd_numbers)
+
+# 15. List Comprehension
+squares = [number ** 2 for number in range(1, 11)]
+print("\n15. Squares:", squares)
+
+# 16. Filter Passing Students
+student_marks = [85, 32, 67, 90, 40, 78, 25]
+
+passed = [mark for mark in student_marks if mark >= 40]
+failed = [mark for mark in student_marks if mark < 40]
+
+print("\n16. Passed Marks:", passed)
+print("Failed Marks:", failed)
+
+# 17. Nested Lists
+students = [
+    ["Faiez", 85],
+    ["Rahul", 72],
+    ["Aman", 90]
+]
+
+print("\n17. First Student:", students[0])
+print("First Student Name:", students[0][0])
+print("First Student Marks:", students[0][1])
+
+print("\nAll Students:")
+for student in students:
+    print("Name:", student[0], "| Marks:", student[1])
+
+# 18. Copying a List
+original = [10, 20, 30]
+copied = original.copy()
+
+copied.append(40)
+
+print("\n18. Original List:", original)
+print("Copied List:", copied)
+
+# 19. Removing All Elements
+temporary = [1, 2, 3]
+temporary.clear()
+print("\n19. Cleared List:", temporary)
+
+# 20. Mini Data Science Example
+data = [45, 67, 89, 23, 90, 76, 54, 88]
+
+total = sum(data)
+count = len(data)
+average = total / count
+
+above_average = [
+    value for value in data if value > average
+]
+
+print("\n20. DATA ANALYSIS")
+print("Data:", data)
+print("Total Values:", count)
+print("Total Sum:", total)
+print("Average:", round(average, 2))
+print("Maximum:", max(data))
+print("Minimum:", min(data))
+print("Above Average:", above_average)
+
+print("\n===== PRACTICE COMPLETED =====")
