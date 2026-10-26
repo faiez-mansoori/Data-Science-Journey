@@ -6623,3 +6623,258 @@ print("Minimum:", min(data))
 print("Above Average:", above_average)
 
 print("\n===== PRACTICE COMPLETED =====")
+```python
+# ==========================================
+# PYTHON TUPLES - PRACTICE
+# Data Science Journey - Faiez
+# ==========================================
+
+# 1. Creating a Tuple
+
+student = ("Faiez", 20, "AI and Data Science")
+
+print("Student Details:", student)
+print("Type of Student:", type(student))
+
+
+# 2. Accessing Tuple Elements
+
+print("\n--- Accessing Elements ---")
+
+print("Name:", student[0])
+print("Age:", student[1])
+print("Course:", student[2])
+
+
+# 3. Negative Indexing
+
+print("\n--- Negative Indexing ---")
+
+print("Last Element:", student[-1])
+print("Second Last Element:", student[-2])
+
+
+# 4. Tuple Slicing
+
+print("\n--- Tuple Slicing ---")
+
+subjects = ("Python", "SQL", "Statistics", "NumPy", "Pandas")
+
+print("All Subjects:", subjects)
+print("First Three Subjects:", subjects[0:3])
+print("Last Two Subjects:", subjects[-2:])
+
+
+# 5. Finding Tuple Length
+
+print("\n--- Tuple Length ---")
+
+print("Total Subjects:", len(subjects))
+
+
+# 6. Checking Elements
+
+print("\n--- Checking Elements ---")
+
+if "Python" in subjects:
+    print("Python is available in the subjects.")
+
+if "Java" not in subjects:
+    print("Java is not available in the subjects.")
+
+
+# 7. Counting Elements
+
+print("\n--- Count Method ---")
+
+marks = (85, 90, 75, 85, 95, 85)
+
+print("Marks Tuple:", marks)
+print("Number of times 85 appears:", marks.count(85))
+
+
+# 8. Finding Index
+
+print("\n--- Index Method ---")
+
+print("Index of 75:", marks.index(75))
+
+
+# 9. Looping Through a Tuple
+
+print("\n--- Tuple Using For Loop ---")
+
+for subject in subjects:
+    print(subject)
+
+
+# 10. Tuple with Data Science Marks
+
+print("\n--- Data Science Marks ---")
+
+data_science_marks = (85, 90, 78, 92, 88)
+
+print("Marks:", data_science_marks)
+print("Highest Marks:", max(data_science_marks))
+print("Lowest Marks:", min(data_science_marks))
+print("Total Marks:", sum(data_science_marks))
+
+average = sum(data_science_marks) / len(data_science_marks)
+
+print("Average Marks:", average)
+
+
+# 11. Tuple Packing
+
+print("\n--- Tuple Packing ---")
+
+student_name = "Faiez"
+student_age = 20
+student_course = "Data Science"
+
+student_info = (student_name, student_age, student_course)
+
+print("Student Information:", student_info)
+
+
+# 12. Tuple Unpacking
+
+print("\n--- Tuple Unpacking ---")
+
+name, age, course = student_info
+
+print("Name:", name)
+print("Age:", age)
+print("Course:", course)
+
+
+# 13. Joining Two Tuples
+
+print("\n--- Joining Tuples ---")
+
+python_topics = ("Variables", "Loops", "Lists")
+data_topics = ("NumPy", "Pandas", "Matplotlib")
+
+all_topics = python_topics + data_topics
+
+print("Python Topics:", python_topics)
+print("Data Science Topics:", data_topics)
+print("All Topics:", all_topics)
+
+
+# 14. Repeating a Tuple
+
+print("\n--- Repeating Tuples ---")
+
+numbers = (1, 2, 3)
+
+print("Original Tuple:", numbers)
+print("Repeated Tuple:", numbers * 3)
+
+
+# 15. Tuple with Different Data Types
+
+print("\n--- Different Data Types ---")
+
+student_data = ("Faiez", 20, 85.5, True)
+
+print("Student Data:", student_data)
+
+for item in student_data:
+    print(item, type(item))
+
+
+# 16. Nested Tuples
+
+print("\n--- Nested Tuples ---")
+
+students = (
+    ("Faiez", 85),
+    ("Rahul", 78),
+    ("Aman", 92)
+)
+
+for student in students:
+    print("Name:", student[0], "| Marks:", student[1])
+
+
+# 17. Sorting Tuple Values
+
+print("\n--- Sorting Tuple Values ---")
+
+numbers = (45, 12, 89, 34, 67)
+
+sorted_numbers = tuple(sorted(numbers))
+
+print("Original Tuple:", numbers)
+print("Sorted Tuple:", sorted_numbers)
+
+
+# 18. Converting List into Tuple
+
+print("\n--- List to Tuple ---")
+
+languages = ["Python", "SQL", "Java"]
+
+language_tuple = tuple(languages)
+
+print("Original List:", languages)
+print("Converted Tuple:", language_tuple)
+
+
+# 19. Converting Tuple into List
+
+print("\n--- Tuple to List ---")
+
+tools = ("Python", "NumPy", "Pandas")
+
+tools_list = list(tools)
+
+tools_list.append("Matplotlib")
+
+print("Original Tuple:", tools)
+print("Updated List:", tools_list)
+
+
+# 20. Single Element Tuple
+
+print("\n--- Single Element Tuple ---")
+
+single_value = (100,)
+
+print("Single Element:", single_value)
+print("Type:", type(single_value))
+
+
+# 21. Tuple Immutability
+
+print("\n--- Tuple Immutability ---")
+
+my_tuple = (10, 20, 30)
+
+print("Original Tuple:", my_tuple)
+
+# Tuples cannot be changed directly.
+# Example: my_tuple[0] = 100
+# This will produce a TypeError.
+
+
+# 22. Practical Data Science Example
+
+print("\n--- Data Science Project ---")
+
+dataset_info = (
+    "Student Performance Dataset",
+    1000,
+    5,
+    "CSV"
+)
+
+print("Dataset Name:", dataset_info[0])
+print("Total Records:", dataset_info[1])
+print("Total Features:", dataset_info[2])
+print("File Format:", dataset_info[3])
+
+print("\nTuple Practice Completed Successfully!")
+```
+
