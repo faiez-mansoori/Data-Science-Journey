@@ -6878,3 +6878,184 @@ print("File Format:", dataset_info[3])
 print("\nTuple Practice Completed Successfully!")
 ```
 
+
+
+
+
+
+
+```python
+# ==========================================
+# PYTHON DICTIONARY PRACTICE
+# Data-Science-Journey
+# ==========================================
+
+print("================================")
+print("   STUDENT MANAGEMENT SYSTEM")
+print("================================")
+
+# 1. Creating a Dictionary
+
+student = {
+    "name": "Faiez",
+    "age": 18,
+    "course": "B.Tech",
+    "branch": "AI and Data Science",
+    "marks": 85,
+    "city": "Bhopal"
+}
+
+print("\nStudent Details:")
+print(student)
+
+
+# 2. Accessing Dictionary Values
+
+print("\nName:", student["name"])
+print("Age:", student["age"])
+print("Course:", student["course"])
+print("Marks:", student["marks"])
+
+
+# 3. Using get() Method
+
+print("\nUsing get Method:")
+print(student.get("name"))
+print(student.get("email", "Email not available"))
+
+
+# 4. Adding New Items
+
+student["email"] = "faiez@example.com"
+student["skills"] = "Python"
+
+print("\nAfter Adding New Items:")
+print(student)
+
+
+# 5. Updating Existing Values
+
+student["marks"] = 90
+student["city"] = "Jabalpur"
+
+print("\nAfter Updating Details:")
+print(student)
+
+
+# 6. Dictionary Keys
+
+print("\nStudent Keys:")
+print(student.keys())
+
+
+# 7. Dictionary Values
+
+print("\nStudent Values:")
+print(student.values())
+
+
+# 8. Dictionary Items
+
+print("\nStudent Items:")
+print(student.items())
+
+
+# 9. Using a For Loop
+
+print("\nPrinting All Student Details:")
+
+for key, value in student.items():
+    print(key, ":", value)
+
+
+# 10. Checking if a Key Exists
+
+print("\nChecking Dictionary Keys:")
+
+if "marks" in student:
+    print("Marks are available")
+
+if "phone" not in student:
+    print("Phone number is not available")
+
+
+# 11. Removing an Item
+
+student.pop("city")
+
+print("\nAfter Removing City:")
+print(student)
+
+
+# 12. Dictionary Length
+
+print("\nTotal Items:", len(student))
+
+
+# 13. Nested Dictionary
+
+students = {
+    "student1": {
+        "name": "Faiez",
+        "marks": 90
+    },
+    "student2": {
+        "name": "Rahul",
+        "marks": 78
+    },
+    "student3": {
+        "name": "Aman",
+        "marks": 88
+    }
+}
+
+print("\nAll Students:")
+
+for student_id, details in students.items():
+    print(student_id, ":", details["name"])
+    print("Marks:", details["marks"])
+
+
+# 14. Finding Total Marks
+
+total_marks = 0
+
+for details in students.values():
+    total_marks = total_marks + details["marks"]
+
+print("\nTotal Marks:", total_marks)
+
+
+# 15. Calculating Average Marks
+
+average_marks = total_marks / len(students)
+
+print("Average Marks:", average_marks)
+
+
+# 16. Finding the Topper
+
+topper = max(
+    students,
+    key=lambda student_id: students[student_id]["marks"]
+)
+
+print("\nTopper:", students[topper]["name"])
+print("Topper Marks:", students[topper]["marks"])
+
+
+# 17. Final Student Report
+
+print("\n================================")
+print("       FINAL STUDENT REPORT")
+print("================================")
+
+for student_id, details in students.items():
+    print(
+        details["name"],
+        "- Marks:",
+        details["marks"]
+    )
+
+print("\nDictionary Practice Completed!")
+```
