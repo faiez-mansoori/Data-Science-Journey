@@ -7059,3 +7059,659 @@ for student_id, details in students.items():
 
 print("\nDictionary Practice Completed!")
 ```
+
+
+
+
+
+```python
+# ==========================================
+# PYTHON FUNCTIONS PRACTICE
+# Author: Faiez
+# Goal: Learning Python for Data Science
+# ==========================================
+
+print("PYTHON FUNCTIONS PRACTICE")
+print("=" * 40)
+
+
+# 1. Simple Function
+def greet():
+    print("Hello Faiez!")
+    print("Welcome to Python Functions")
+
+
+greet()
+
+
+# 2. Function with Parameters
+def student_details(name, age):
+    print("Student Name:", name)
+    print("Student Age:", age)
+
+
+student_details("Faiez", 18)
+student_details("Rahul", 20)
+
+
+# 3. Function with Return
+def add_numbers(a, b):
+    return a + b
+
+
+result = add_numbers(10, 20)
+print("Addition:", result)
+
+
+# 4. Subtraction Function
+def subtract_numbers(a, b):
+    return a - b
+
+
+print("Subtraction:", subtract_numbers(50, 20))
+
+
+# 5. Multiplication Function
+def multiply_numbers(a, b):
+    return a * b
+
+
+print("Multiplication:", multiply_numbers(5, 6))
+
+
+# 6. Division Function
+def divide_numbers(a, b):
+    if b == 0:
+        return "Cannot divide by zero"
+    return a / b
+
+
+print("Division:", divide_numbers(20, 4))
+print("Division:", divide_numbers(10, 0))
+
+
+# 7. Even or Odd Function
+def check_even_odd(number):
+    if number % 2 == 0:
+        return "Even Number"
+    else:
+        return "Odd Number"
+
+
+print(check_even_odd(10))
+print(check_even_odd(7))
+
+
+# 8. Positive, Negative or Zero
+def check_number(number):
+    if number > 0:
+        return "Positive Number"
+    elif number < 0:
+        return "Negative Number"
+    else:
+        return "Zero"
+
+
+print(check_number(15))
+print(check_number(-5))
+print(check_number(0))
+
+
+# 9. Calculate Square
+def square(number):
+    return number ** 2
+
+
+print("Square:", square(5))
+
+
+# 10. Calculate Cube
+def cube(number):
+    return number ** 3
+
+
+print("Cube:", cube(3))
+
+
+# 11. Find Maximum of Two Numbers
+def find_maximum(a, b):
+    if a > b:
+        return a
+    else:
+        return b
+
+
+print("Maximum:", find_maximum(25, 40))
+
+
+# 12. Calculate Average of Marks
+def calculate_average(marks):
+    if len(marks) == 0:
+        return 0
+
+    total = sum(marks)
+    average = total / len(marks)
+    return average
+
+
+student_marks = [85, 90, 78, 92, 88]
+
+print("Student Marks:", student_marks)
+print("Average Marks:", calculate_average(student_marks))
+
+
+# 13. Calculate Total Marks
+def calculate_total(marks):
+    return sum(marks)
+
+
+print("Total Marks:", calculate_total(student_marks))
+
+
+# 14. Check Pass or Fail
+def check_result(marks):
+    if marks >= 40:
+        return "Pass"
+    else:
+        return "Fail"
+
+
+print("Result:", check_result(75))
+print("Result:", check_result(30))
+
+
+# 15. Count Characters in a String
+def count_characters(text):
+    return len(text)
+
+
+name = "Faiez"
+print("Name:", name)
+print("Characters:", count_characters(name))
+
+
+# 16. Convert Text to Uppercase
+def convert_uppercase(text):
+    return text.upper()
+
+
+print(convert_uppercase("python programming"))
+
+
+# 17. Find Factorial
+def factorial(number):
+    if number < 0:
+        return "Factorial is not defined for negative numbers"
+
+    result = 1
+
+    for i in range(1, number + 1):
+        result = result * i
+
+    return result
+
+
+print("Factorial:", factorial(5))
+
+
+# 18. Find Numbers Greater Than 10
+def filter_numbers(numbers):
+    result = []
+
+    for number in numbers:
+        if number > 10:
+            result.append(number)
+
+    return result
+
+
+numbers = [5, 12, 8, 20, 15, 3]
+print("Original Numbers:", numbers)
+print("Numbers Greater Than 10:", filter_numbers(numbers))
+
+
+# 19. Find Minimum Number in a List
+def find_minimum(numbers):
+    if len(numbers) == 0:
+        return None
+
+    return min(numbers)
+
+
+print("Minimum Number:", find_minimum([10, 5, 25, 2, 18]))
+
+
+# 20. Data Science Student Profile
+def student_profile(name, skill, goal):
+    print("\nSTUDENT PROFILE")
+    print("-" * 30)
+    print("Name:", name)
+    print("Skill:", skill)
+    print("Career Goal:", goal)
+
+
+student_profile(
+    "Faiez",
+    "Python Programming",
+    "Become a Data Scientist"
+)
+
+
+print("\n" + "=" * 40)
+print("ALL FUNCTION PROGRAMS COMPLETED!")
+print("Keep Learning and Practicing Python!")
+```
+
+
+
+```python
+# ==========================================
+# PYTHON FUNCTIONS PRACTICE
+# Author: Faiez
+# Goal: Data Science
+# ==========================================
+
+print("\nPYTHON FUNCTIONS PRACTICE")
+print("=" * 40)
+
+
+# 1. Simple Function
+def greet():
+    print("Hello Faiez!")
+    print("Welcome to Python Programming")
+
+
+greet()
+
+
+# 2. Function with Parameters
+def student_details(name, age):
+    print("Student Name:", name)
+    print("Student Age:", age)
+
+
+student_details("Faiez", 18)
+
+
+# 3. Addition Function
+def add_numbers(a, b):
+    return a + b
+
+
+print("Addition:", add_numbers(10, 20))
+
+
+# 4. Subtraction Function
+def subtract_numbers(a, b):
+    return a - b
+
+
+print("Subtraction:", subtract_numbers(50, 20))
+
+
+# 5. Multiplication Function
+def multiply_numbers(a, b):
+    return a * b
+
+
+print("Multiplication:", multiply_numbers(5, 6))
+
+
+# 6. Division Function
+def divide_numbers(a, b):
+    if b == 0:
+        return "Cannot divide by zero"
+    return a / b
+
+
+print("Division:", divide_numbers(20, 4))
+print("Division:", divide_numbers(10, 0))
+
+
+# 7. Even or Odd
+def check_even_odd(number):
+    if number % 2 == 0:
+        return "Even Number"
+    return "Odd Number"
+
+
+print(check_even_odd(10))
+print(check_even_odd(7))
+
+
+# 8. Positive, Negative or Zero
+def check_number(number):
+    if number > 0:
+        return "Positive"
+    elif number < 0:
+        return "Negative"
+    return "Zero"
+
+
+print(check_number(15))
+print(check_number(-5))
+print(check_number(0))
+
+
+# 9. Square Function
+def square(number):
+    return number ** 2
+
+
+print("Square:", square(5))
+
+
+# 10. Cube Function
+def cube(number):
+    return number ** 3
+
+
+print("Cube:", cube(3))
+
+
+# 11. Calculate Total Marks
+def calculate_total(marks):
+    return sum(marks)
+
+
+marks = [85, 90, 78, 92, 88]
+print("Marks:", marks)
+print("Total Marks:", calculate_total(marks))
+
+
+# 12. Calculate Average
+def calculate_average(marks):
+    if len(marks) == 0:
+        return 0
+    return sum(marks) / len(marks)
+
+
+print("Average Marks:", calculate_average(marks))
+
+
+# 13. Pass or Fail
+def check_result(marks):
+    if marks >= 40:
+        return "Pass"
+    return "Fail"
+
+
+print("Result:", check_result(75))
+print("Result:", check_result(30))
+
+
+# 14. Find Largest Number
+def find_largest(numbers):
+    if len(numbers) == 0:
+        return None
+    return max(numbers)
+
+
+numbers = [10, 25, 5, 40, 15]
+print("Largest Number:", find_largest(numbers))
+
+
+# 15. Factorial Function
+def factorial(number):
+    if number < 0:
+        return "Not defined for negative numbers"
+
+    result = 1
+
+    for i in range(1, number + 1):
+        result = result * i
+
+    return result
+
+
+print("Factorial:", factorial(5))
+
+
+# 16. Filter Numbers Greater Than 10
+def filter_numbers(numbers):
+    result = []
+
+    for number in numbers:
+        if number > 10:
+            result.append(number)
+
+    return result
+
+
+print("Filtered Numbers:", filter_numbers([5, 12, 8, 20, 15]))
+
+
+# 17. Convert Text to Uppercase
+def convert_uppercase(text):
+    return text.upper()
+
+
+print(convert_uppercase("python programming"))
+
+
+# 18. Student Profile
+def student_profile(name, skill, goal):
+    print("\nSTUDENT PROFILE")
+    print("Name:", name)
+    print("Skill:", skill)
+    print("Goal:", goal)
+
+
+student_profile(
+    "Faiez",
+    "Python",
+    "Become a Data Scientist"
+)
+
+
+print("\nALL FUNCTION PROGRAMS COMPLETED!")
+```
+
+
+
+```python
+# ==========================================
+# PYTHON FUNCTIONS PRACTICE
+# Author: Faiez
+# Goal: Data Science
+# ==========================================
+
+print("\nPYTHON FUNCTIONS PRACTICE")
+print("=" * 40)
+
+
+# 1. Simple Function
+def greet():
+    print("Hello Faiez!")
+    print("Welcome to Python Programming")
+
+
+greet()
+
+
+# 2. Function with Parameters
+def student_details(name, age):
+    print("Student Name:", name)
+    print("Student Age:", age)
+
+
+student_details("Faiez", 18)
+
+
+# 3. Addition Function
+def add_numbers(a, b):
+    return a + b
+
+
+print("Addition:", add_numbers(10, 20))
+
+
+# 4. Subtraction Function
+def subtract_numbers(a, b):
+    return a - b
+
+
+print("Subtraction:", subtract_numbers(50, 20))
+
+
+# 5. Multiplication Function
+def multiply_numbers(a, b):
+    return a * b
+
+
+print("Multiplication:", multiply_numbers(5, 6))
+
+
+# 6. Division Function
+def divide_numbers(a, b):
+    if b == 0:
+        return "Cannot divide by zero"
+    return a / b
+
+
+print("Division:", divide_numbers(20, 4))
+print("Division:", divide_numbers(10, 0))
+
+
+# 7. Even or Odd
+def check_even_odd(number):
+    if number % 2 == 0:
+        return "Even Number"
+    return "Odd Number"
+
+
+print(check_even_odd(10))
+print(check_even_odd(7))
+
+
+# 8. Positive, Negative or Zero
+def check_number(number):
+    if number > 0:
+        return "Positive"
+    elif number < 0:
+        return "Negative"
+    return "Zero"
+
+
+print(check_number(15))
+print(check_number(-5))
+print(check_number(0))
+
+
+# 9. Square Function
+def square(number):
+    return number ** 2
+
+
+print("Square:", square(5))
+
+
+# 10. Cube Function
+def cube(number):
+    return number ** 3
+
+
+print("Cube:", cube(3))
+
+
+# 11. Calculate Total Marks
+def calculate_total(marks):
+    return sum(marks)
+
+
+marks = [85, 90, 78, 92, 88]
+print("Marks:", marks)
+print("Total Marks:", calculate_total(marks))
+
+
+# 12. Calculate Average
+def calculate_average(marks):
+    if len(marks) == 0:
+        return 0
+    return sum(marks) / len(marks)
+
+
+print("Average Marks:", calculate_average(marks))
+
+
+# 13. Pass or Fail
+def check_result(marks):
+    if marks >= 40:
+        return "Pass"
+    return "Fail"
+
+
+print("Result:", check_result(75))
+print("Result:", check_result(30))
+
+
+# 14. Find Largest Number
+def find_largest(numbers):
+    if len(numbers) == 0:
+        return None
+    return max(numbers)
+
+
+numbers = [10, 25, 5, 40, 15]
+print("Largest Number:", find_largest(numbers))
+
+
+# 15. Factorial Function
+def factorial(number):
+    if number < 0:
+        return "Not defined for negative numbers"
+
+    result = 1
+
+    for i in range(1, number + 1):
+        result = result * i
+
+    return result
+
+
+print("Factorial:", factorial(5))
+
+
+# 16. Filter Numbers Greater Than 10
+def filter_numbers(numbers):
+    result = []
+
+    for number in numbers:
+        if number > 10:
+            result.append(number)
+
+    return result
+
+
+print("Filtered Numbers:", filter_numbers([5, 12, 8, 20, 15]))
+
+
+# 17. Convert Text to Uppercase
+def convert_uppercase(text):
+    return text.upper()
+
+
+print(convert_uppercase("python programming"))
+
+
+# 18. Student Profile
+def student_profile(name, skill, goal):
+    print("\nSTUDENT PROFILE")
+    print("Name:", name)
+    print("Skill:", skill)
+    print("Goal:", goal)
+
+
+student_profile(
+    "Faiez",
+    "Python",
+    "Become a Data Scientist"
+)
+
+
+print("\nALL FUNCTION PROGRAMS COMPLETED!")
+```
+
+
+
+
