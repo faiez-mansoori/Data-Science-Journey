@@ -7478,6 +7478,158 @@ def filter_numbers(numbers):
     return result
 
 
+
+
+
+
+```python
+# ==========================================
+# PYTHON EXCEPTION HANDLING
+# Author: Faiez
+# Goal: Data Science
+# ==========================================
+
+print("\nPYTHON EXCEPTION HANDLING")
+print("=" * 40)
+
+
+# 1. Basic Try and Except
+try:
+    number = int(input("Enter a number: "))
+    print("Your number is:", number)
+
+except ValueError:
+    print("Please enter a valid number!")
+
+
+# 2. Division with Error Handling
+def divide_numbers(a, b):
+    try:
+        result = a / b
+        return result
+
+    except ZeroDivisionError:
+        return "Cannot divide by zero!"
+
+
+print("Division:", divide_numbers(10, 2))
+print("Division:", divide_numbers(10, 0))
+
+
+# 3. Handling Multiple Exceptions
+try:
+    number = int(input("Enter a number: "))
+    result = 100 / number
+    print("Result:", result)
+
+except ValueError:
+    print("Invalid input! Enter a number.")
+
+except ZeroDivisionError:
+    print("Number cannot be zero.")
+
+
+# 4. Using Finally
+try:
+    print("Program is running.")
+
+except Exception:
+    print("Something went wrong.")
+
+finally:
+    print("This block always executes.")
+
+
+# 5. Safe Integer Conversion
+def convert_to_integer(value):
+    try:
+        return int(value)
+
+    except ValueError:
+        return "Invalid integer!"
+
+
+print(convert_to_integer("100"))
+print(convert_to_integer("hello"))
+
+
+# 6. Safe List Access
+def get_list_item(items, index):
+    try:
+        return items[index]
+
+    except IndexError:
+        return "Index does not exist."
+
+    except TypeError:
+        return "Index must be an integer."
+
+
+numbers = [10, 20, 30, 40]
+
+print("First Item:", get_list_item(numbers, 0))
+print("Invalid Item:", get_list_item(numbers, 10))
+
+
+# 7. Safe Dictionary Access
+def get_student_marks(student, subject):
+    try:
+        return student[subject]
+
+    except KeyError:
+        return "Subject not found."
+
+
+marks = {
+    "Python": 90,
+    "SQL": 85,
+    "Statistics": 80
+}
+
+print("Python Marks:", get_student_marks(marks, "Python"))
+print("Java Marks:", get_student_marks(marks, "Java"))
+
+
+# 8. Validate Student Marks
+def check_marks(marks):
+    try:
+        marks = float(marks)
+
+        if marks < 0 or marks > 100:
+            return "Marks must be between 0 and 100."
+
+        return "Valid marks: " + str(marks)
+
+    except (ValueError, TypeError):
+        return "Please enter valid numeric marks."
+
+
+print(check_marks(85))
+print(check_marks(120))
+print(check_marks("hello"))
+
+
+# 9. Safe Average Calculation
+def calculate_average(numbers):
+    try:
+        if len(numbers) == 0:
+            return "List is empty."
+
+        return sum(numbers) / len(numbers)
+
+    except TypeError:
+        return "Please provide a list of numbers."
+
+
+print("Average:", calculate_average([80, 90, 70]))
+print("Average:", calculate_average([]))
+
+
+# 10. Final Message
+print("\nEXCEPTION HANDLING PRACTICE COMPLETED!")
+print("Keep Practicing Python!")
+```
+
 print("Filtered Numbers:", filter_numbers([5, 12, 8, 20, 15]))
 
 
