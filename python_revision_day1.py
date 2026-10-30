@@ -6458,7 +6458,7 @@ print(f"Name       : {profile_name.title()}")
 print(f"Skills     : {profile_skill}")
 print(f"Career Goal: {profile_goal.upper()}")
 print("Status     : Learning Every Day!")
-print("=" * 5
+print("=" * 50)
 
 # ==========================================
 # PYTHON LISTS - COMPLETE PRACTICE
