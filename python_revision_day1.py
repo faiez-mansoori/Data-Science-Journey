@@ -6623,7 +6623,7 @@ print("Minimum:", min(data))
 print("Above Average:", above_average)
 
 print("\n===== PRACTICE COMPLETED =====")
-```python
+python
 # ==========================================
 # PYTHON TUPLES - PRACTICE
 # Data Science Journey - Faiez
@@ -6648,7 +6648,7 @@ print("Course:", student[2])
 
 # 3. Negative Indexing
 
-print("\n--- Negative Indexing ---")
+sprint("\n--- Negative Indexing ---")
 
 print("Last Element:", student[-1])
 print("Second Last Element:", student[-2])
@@ -6876,7 +6876,6 @@ print("Total Features:", dataset_info[2])
 print("File Format:", dataset_info[3])
 
 print("\nTuple Practice Completed Successfully!")
-```
 
 
 
@@ -6884,8 +6883,9 @@ print("\nTuple Practice Completed Successfully!")
 
 
 
-```python
-# ==========================================
+
+python
+# ==```========================================
 # PYTHON DICTIONARY PRACTICE
 # Data-Science-Journey
 # ==========================================
@@ -7668,202 +7668,101 @@ print("\nALL FUNCTION PROGRAMS COMPLETED!")
 # Goal: Data Science
 # ==========================================
 
-print("\nPYTHON FUNCTIONS PRACTICE")
-print("=" * 40)
+```python
+# ==========================================
+# Python Functions Practice
+# Topic: Lambda, Map, Filter and Reduce
+# ==========================================
+
+print("PYTHON ADVANCED FUNCTIONS PRACTICE")
+print("-----------------------------------")
+
+# 1. Normal Function
+def calculate_square(number):
+    return number * number
+
+print("\n1. Normal Function")
+print("Square of 5:", calculate_square(5))
 
 
-# 1. Simple Function
-def greet():
-    print("Hello Faiez!")
-    print("Welcome to Python Programming")
+# 2. Lambda Function
+square = lambda number: number * number
+
+print("\n2. Lambda Function")
+print("Square of 6:", square(6))
 
 
-greet()
+# 3. Student Marks
+marks = [85, 72, 90, 45, 67, 95, 38, 78]
+
+print("\n3. Student Marks")
+print("All Marks:", marks)
 
 
-# 2. Function with Parameters
-def student_details(name, age):
-    print("Student Name:", name)
-    print("Student Age:", age)
+# 4. Map Function
+bonus_marks = list(map(lambda mark: mark + 5, marks))
+
+print("\n4. Bonus Marks")
+print("Original Marks:", marks)
+print("After Bonus:", bonus_marks)
 
 
-student_details("Faiez", 18)
+# 5. Filter Function
+good_marks = list(filter(lambda mark: mark >= 70, marks))
+
+print("\n5. Students Scoring 70 or More")
+print(good_marks)
 
 
-# 3. Addition Function
-def add_numbers(a, b):
-    return a + b
+# 6. Reduce Function
+from functools import reduce
+
+total_marks = reduce(lambda a, b: a + b, marks)
+
+print("\n6. Total Marks")
+print("Total:", total_marks)
 
 
-print("Addition:", add_numbers(10, 20))
+# 7. Calculate Average
+average_marks = total_marks / len(marks)
+
+print("\n7. Average Marks")
+print("Average:", round(average_marks, 2))
 
 
-# 4. Subtraction Function
-def subtract_numbers(a, b):
-    return a - b
+# 8. Maximum and Minimum
+highest_marks = max(marks)
+lowest_marks = min(marks)
+
+print("\n8. Highest and Lowest Marks")
+print("Highest:", highest_marks)
+print("Lowest:", lowest_marks)
 
 
-print("Subtraction:", subtract_numbers(50, 20))
-
-
-# 5. Multiplication Function
-def multiply_numbers(a, b):
-    return a * b
-
-
-print("Multiplication:", multiply_numbers(5, 6))
-
-
-# 6. Division Function
-def divide_numbers(a, b):
-    if b == 0:
-        return "Cannot divide by zero"
-    return a / b
-
-
-print("Division:", divide_numbers(20, 4))
-print("Division:", divide_numbers(10, 0))
-
-
-# 7. Even or Odd
-def check_even_odd(number):
-    if number % 2 == 0:
-        return "Even Number"
-    return "Odd Number"
-
-
-print(check_even_odd(10))
-print(check_even_odd(7))
-
-
-# 8. Positive, Negative or Zero
-def check_number(number):
-    if number > 0:
-        return "Positive"
-    elif number < 0:
-        return "Negative"
-    return "Zero"
-
-
-print(check_number(15))
-print(check_number(-5))
-print(check_number(0))
-
-
-# 9. Square Function
-def square(number):
-    return number ** 2
-
-
-print("Square:", square(5))
-
-
-# 10. Cube Function
-def cube(number):
-    return number ** 3
-
-
-print("Cube:", cube(3))
-
-
-# 11. Calculate Total Marks
-def calculate_total(marks):
-    return sum(marks)
-
-
-marks = [85, 90, 78, 92, 88]
-print("Marks:", marks)
-print("Total Marks:", calculate_total(marks))
-
-
-# 12. Calculate Average
-def calculate_average(marks):
-    if len(marks) == 0:
-        return 0
-    return sum(marks) / len(marks)
-
-
-print("Average Marks:", calculate_average(marks))
-
-
-# 13. Pass or Fail
-def check_result(marks):
-    if marks >= 40:
+# 9. Student Results
+def check_result(mark):
+    if mark >= 90:
+        return "Excellent"
+    elif mark >= 70:
+        return "Good"
+    elif mark >= 40:
         return "Pass"
-    return "Fail"
+    else:
+        return "Fail"
 
 
-print("Result:", check_result(75))
-print("Result:", check_result(30))
+print("\n9. Student Results")
+
+for mark in marks:
+    print("Marks:", mark, "| Result:", check_result(mark))
 
 
-# 14. Find Largest Number
-def find_largest(numbers):
-    if len(numbers) == 0:
-        return None
-    return max(numbers)
+# 10. Final Summary
+print("\n10. Final Summary")
+print("Number of Students:", len(marks))
+print("Total Marks:", total_marks)
+print("Average Marks:", round(average_marks, 2))
+print("Highest Marks:", highest_marks)
+print("Lowest Marks:", lowest_marks)
 
-
-numbers = [10, 25, 5, 40, 15]
-print("Largest Number:", find_largest(numbers))
-
-
-# 15. Factorial Function
-def factorial(number):
-    if number < 0:
-        return "Not defined for negative numbers"
-
-    result = 1
-
-    for i in range(1, number + 1):
-        result = result * i
-
-    return result
-
-
-print("Factorial:", factorial(5))
-
-
-# 16. Filter Numbers Greater Than 10
-def filter_numbers(numbers):
-    result = []
-
-    for number in numbers:
-        if number > 10:
-            result.append(number)
-
-    return result
-
-
-print("Filtered Numbers:", filter_numbers([5, 12, 8, 20, 15]))
-
-
-# 17. Convert Text to Uppercase
-def convert_uppercase(text):
-    return text.upper()
-
-
-print(convert_uppercase("python programming"))
-
-
-# 18. Student Profile
-def student_profile(name, skill, goal):
-    print("\nSTUDENT PROFILE")
-    print("Name:", name)
-    print("Skill:", skill)
-    print("Goal:", goal)
-
-
-student_profile(
-    "Faiez",
-    "Python",
-    "Become a Data Scientist"
-)
-
-
-print("\nALL FUNCTION PROGRAMS COMPLETED!")
-```
-
-
-
-
+print("\nPython Practice Completed Successfully!")
