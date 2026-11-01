@@ -7058,7 +7058,7 @@ for student_id, details in students.items():
     )
 
 print("\nDictionary Practice Completed!")
-```
+
 
 
 
@@ -7654,115 +7654,328 @@ student_profile(
     "Python",
     "Become a Data Scientist"
 )
-
-
-print("\nALL FUNCTION PROGRAMS COMPLETED!")
-```
-
-
-
 ```python
 # ==========================================
-# PYTHON FUNCTIONS PRACTICE
-# Author: Faiez
-# Goal: Data Science
+# PYTHON COMPLETE REVISION
+# Variables to Advanced Functions
 # ==========================================
 
-```python
-# ==========================================
-# Python Functions Practice
-# Topic: Lambda, Map, Filter and Reduce
-# ==========================================
 
-print("PYTHON ADVANCED FUNCTIONS PRACTICE")
-print("-----------------------------------")
+# 1. VARIABLES
+name = "Faiez"
+age = 18
+is_student = True
 
-# 1. Normal Function
-def calculate_square(number):
-    return number * number
-
-print("\n1. Normal Function")
-print("Square of 5:", calculate_square(5))
+print(name)
+print(age)
+print(is_student)
 
 
-# 2. Lambda Function
-square = lambda number: number * number
+# 2. DATA TYPES
+name = "Faiez"
+age = 18
+marks = 85.5
+is_student = True
 
-print("\n2. Lambda Function")
-print("Square of 6:", square(6))
-
-
-# 3. Student Marks
-marks = [85, 72, 90, 45, 67, 95, 38, 78]
-
-print("\n3. Student Marks")
-print("All Marks:", marks)
+print(type(name))
+print(type(age))
+print(type(marks))
+print(type(is_student))
 
 
-# 4. Map Function
-bonus_marks = list(map(lambda mark: mark + 5, marks))
+# 3. TYPE CASTING
+number = "100"
 
-print("\n4. Bonus Marks")
-print("Original Marks:", marks)
-print("After Bonus:", bonus_marks)
+number = int(number)
 
-
-# 5. Filter Function
-good_marks = list(filter(lambda mark: mark >= 70, marks))
-
-print("\n5. Students Scoring 70 or More")
-print(good_marks)
+print(number)
+print(type(number))
 
 
-# 6. Reduce Function
+# 4. USER INPUT
+name = input("Enter your name: ")
+print("Welcome", name)
+
+
+# 5. ARITHMETIC OPERATORS
+a = 10
+b = 3
+
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+print(a // b)
+print(a % b)
+print(a ** b)
+
+
+# 6. COMPARISON OPERATORS
+a = 10
+b = 20
+
+print(a == b)
+print(a != b)
+print(a > b)
+print(a < b)
+print(a >= b)
+print(a <= b)
+
+
+# 7. IF-ELIF-ELSE
+marks = 75
+
+if marks >= 90:
+    print("Grade A")
+elif marks >= 70:
+    print("Grade B")
+elif marks >= 50:
+    print("Grade C")
+else:
+    print("Needs Improvement")
+
+
+# 8. FIND LARGEST OF THREE NUMBERS
+a = 25
+b = 40
+c = 15
+
+if a >= b and a >= c:
+    print("Largest:", a)
+elif b >= a and b >= c:
+    print("Largest:", b)
+else:
+    print("Largest:", c)
+
+
+# 9. FOR LOOP
+for i in range(1, 11):
+    print(i)
+
+
+# 10. WHILE LOOP
+i = 1
+
+while i <= 5:
+    print(i)
+    i += 1
+
+
+# 11. BREAK AND CONTINUE
+for i in range(1, 6):
+    if i == 3:
+        continue
+    print(i)
+
+for i in range(1, 6):
+    if i == 4:
+        break
+    print(i)
+
+
+# 12. STRINGS
+text = "python programming"
+
+print(text.upper())
+print(text.lower())
+print(text.title())
+print(len(text))
+print(text.replace("python", "data"))
+print(text[0])
+print(text[-1])
+
+
+# 13. LISTS
+numbers = [10, 20, 30, 40, 50]
+
+print(numbers)
+print(numbers[0])
+print(numbers[-1])
+print(len(numbers))
+print(max(numbers))
+print(min(numbers))
+print(sum(numbers))
+
+numbers.append(60)
+numbers.remove(20)
+
+print(numbers)
+
+
+# 14. LIST AVERAGE
+marks = [80, 70, 90, 85]
+
+average = sum(marks) / len(marks)
+
+print("Average:", average)
+
+
+# 15. NESTED LIST
+students = [
+    ["Faiez", 85],
+    ["Rahul", 75],
+    ["Aman", 90]
+]
+
+print(students[0])
+print(students[0][0])
+print(students[0][1])
+
+
+# 16. TUPLES
+numbers = (10, 20, 30, 40)
+
+print(numbers)
+print(numbers[0])
+print(len(numbers))
+print(max(numbers))
+print(min(numbers))
+
+
+# 17. SETS
+numbers = {10, 20, 30, 20, 10}
+
+print(numbers)
+
+numbers.add(40)
+numbers.remove(20)
+
+print(numbers)
+
+
+# 18. DICTIONARIES
+student = {
+    "name": "Faiez",
+    "age": 18,
+    "marks": 85
+}
+
+print(student["name"])
+print(student["age"])
+print(student["marks"])
+
+student["city"] = "Bhopal"
+student["marks"] = 90
+
+print(student)
+
+print(student.keys())
+print(student.values())
+print(student.items())
+
+
+# 19. FUNCTIONS
+def greet():
+    print("Hello, welcome to Python!")
+
+greet()
+
+
+# 20. FUNCTION WITH PARAMETERS
+def add(a, b):
+    print(a + b)
+
+add(10, 20)
+
+
+# 21. FUNCTION WITH RETURN
+def multiply(a, b):
+    return a * b
+
+result = multiply(5, 4)
+
+print(result)
+
+
+# 22. DEFAULT ARGUMENT
+def welcome(name="Student"):
+    print("Welcome", name)
+
+welcome()
+welcome("Faiez")
+
+
+# 23. LAMBDA FUNCTION
+square = lambda x: x ** 2
+
+print(square(5))
+
+
+# 24. MAP FUNCTION
+numbers = [1, 2, 3, 4, 5]
+
+squares = list(map(lambda x: x ** 2, numbers))
+
+print(squares)
+
+
+# 25. FILTER FUNCTION
+numbers = [1, 2, 3, 4, 5, 6]
+
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+
+print(even_numbers)
+
+
+# 26. REDUCE FUNCTION
 from functools import reduce
 
-total_marks = reduce(lambda a, b: a + b, marks)
+numbers = [1, 2, 3, 4, 5]
 
-print("\n6. Total Marks")
-print("Total:", total_marks)
+total = reduce(lambda x, y: x + y, numbers)
 
-
-# 7. Calculate Average
-average_marks = total_marks / len(marks)
-
-print("\n7. Average Marks")
-print("Average:", round(average_marks, 2))
+print(total)
 
 
-# 8. Maximum and Minimum
-highest_marks = max(marks)
-lowest_marks = min(marks)
+# 27. EXCEPTION HANDLING
+try:
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
 
-print("\n8. Highest and Lowest Marks")
-print("Highest:", highest_marks)
-print("Lowest:", lowest_marks)
+    result = a / b
 
+    print("Result:", result)
 
-# 9. Student Results
-def check_result(mark):
-    if mark >= 90:
-        return "Excellent"
-    elif mark >= 70:
-        return "Good"
-    elif mark >= 40:
-        return "Pass"
-    else:
-        return "Fail"
+except ValueError:
+    print("Please enter valid numbers.")
+
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
 
 
-print("\n9. Student Results")
+# 28. CLASSES AND OBJECTS
+class Student:
 
-for mark in marks:
-    print("Marks:", mark, "| Result:", check_result(mark))
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    def display(self):
+        print("Name:", self.name)
+        print("Marks:", self.marks)
 
 
-# 10. Final Summary
-print("\n10. Final Summary")
-print("Number of Students:", len(marks))
-print("Total Marks:", total_marks)
-print("Average Marks:", round(average_marks, 2))
-print("Highest Marks:", highest_marks)
-print("Lowest Marks:", lowest_marks)
+student1 = Student("Faiez", 85)
 
-print("\nPython Practice Completed Successfully!")
+student1.display()
+
+
+# 29. LIST COMPREHENSION
+numbers = [1, 2, 3, 4, 5]
+
+squares = [x ** 2 for x in numbers]
+
+print(squares)
+
+
+# 30. FINAL PRACTICE
+numbers = [10, 20, 30, 40, 50]
+
+total = sum(numbers)
+average = total / len(numbers)
+
+print("Total:", total)
+print("Average:", average)
+
+print("Python Revision Completed!")
+
