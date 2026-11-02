@@ -8304,3 +8304,125 @@ print("Average:", average)
 
 print("Python Revision Completed!")
 
+
+
+```python
+# ==========================================
+# PYTHON NESTED LISTS
+# Data Science Journey - Faiez
+# ==========================================
+
+# 1. Basic Nested List
+students = [
+    ["Faiez", 85],
+    ["Rahul", 72],
+    ["Aman", 90]
+]
+
+print("Student Data:")
+print(students)
+
+
+# 2. Access Elements
+print("\nAccess Elements:")
+print(students[0])
+print(students[0][0])
+print(students[0][1])
+
+
+# 3. Print All Students
+print("\nAll Students:")
+for student in students:
+    print(student)
+
+
+# 4. Print Student Names
+print("\nStudent Names:")
+for student in students:
+    print(student[0])
+
+
+# 5. Print Student Marks
+print("\nStudent Marks:")
+for student in students:
+    print(student[1])
+
+
+# 6. Calculate Total Marks
+total_marks = 0
+
+for student in students:
+    total_marks = total_marks + student[1]
+
+print("\nTotal Marks:", total_marks)
+
+
+# 7. Calculate Average Marks
+average = total_marks / len(students)
+
+print("Average Marks:", average)
+
+
+# 8. Find Highest Marks
+highest_marks = max(student[1] for student in students)
+
+print("Highest Marks:", highest_marks)
+
+
+# 9. Find Lowest Marks
+lowest_marks = min(student[1] for student in students)
+
+print("Lowest Marks:", lowest_marks)
+
+
+# 10. Add a New Student
+students.append(["Sahil", 88])
+
+print("\nAfter Adding Student:")
+for student in students:
+    print(student)
+
+
+# 11. Update Student Marks
+students[0][1] = 95
+
+print("\nAfter Updating Faiez's Marks:")
+for student in students:
+    print(student)
+
+
+# 12. Search for a Student
+search_name = "Rahul"
+
+for student in students:
+    if student[0] == search_name:
+        print("\nStudent Found:", student)
+        break
+
+
+# 13. Display Students Who Scored More Than 80
+print("\nStudents Scoring More Than 80:")
+
+for student in students:
+    if student[1] > 80:
+        print(student[0], student[1])
+
+
+# 14. Count Students
+print("\nTotal Students:", len(students))
+
+
+# 15. Display Student Result
+print("\nStudent Results:")
+
+for student in students:
+    if student[1] >= 80:
+        result = "Excellent"
+    elif student[1] >= 60:
+        result = "Good"
+    else:
+        result = "Needs Improvement"
+
+    print(student[0], "-", result)
+```
+
