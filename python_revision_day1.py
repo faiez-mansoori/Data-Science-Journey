@@ -8306,7 +8306,7 @@ print("Python Revision Completed!")
 
 
 
-```python
+python
 # ==========================================
 # PYTHON NESTED LISTS
 # Data Science Journey - Faiez
@@ -8424,5 +8424,143 @@ for student in students:
         result = "Needs Improvement"
 
     print(student[0], "-", result)
-```
+
+
+
+python
+# ==========================================
+# STUDENT PERFORMANCE ANALYSIS SYSTEM
+# Created by: Faiez Mansoori
+# Python Project
+# ==========================================
+
+students = [
+    {"name": "Faiez", "marks": 85},
+    {"name": "Rahul", "marks": 72},
+    {"name": "Aman", "marks": 91},
+    {"name": "Priya", "marks": 65},
+    {"name": "Neha", "marks": 48},
+    {"name": "Arjun", "marks": 78},
+    {"name": "Sara", "marks": 95}
+]
+
+
+# Calculate Grade
+def calculate_grade(marks):
+
+    if marks >= 90:
+        return "A+"
+    elif marks >= 80:
+        return "A"
+    elif marks >= 70:
+        return "B"
+    elif marks >= 60:
+        return "C"
+    elif marks >= 50:
+        return "D"
+    else:
+        return "Fail"
+
+
+# Display All Students
+def display_students():
+
+    print("\n========== STUDENT RECORDS ==========")
+
+    for student in students:
+        print(
+            f"Name: {student['name']} | "
+            f"Marks: {student['marks']} | "
+            f"Grade: {calculate_grade(student['marks'])}"
+        )
+
+
+# Calculate Average
+def calculate_average():
+
+    total = sum(student["marks"] for student in students)
+
+    average = total / len(students)
+
+    print("\nClass Average:", round(average, 2))
+
+
+# Find Topper
+def find_topper():
+
+    topper = max(students, key=lambda x: x["marks"])
+
+    print("\nTopper:", topper["name"])
+    print("Highest Marks:", topper["marks"])
+
+
+# Find Passed Students
+def passed_students():
+
+    passed = list(filter(lambda x: x["marks"] >= 50, students))
+
+    print("\n========== PASSED STUDENTS ==========")
+
+    for student in passed:
+        print(student["name"], "-", student["marks"])
+
+
+# Sort Students
+def sort_students():
+
+    sorted_students = sorted(
+        students,
+        key=lambda x: x["marks"],
+        reverse=True
+    )
+
+    print("\n========== RANKING ==========")
+
+    for rank, student in enumerate(sorted_students, start=1):
+
+        print(
+            rank,
+            student["name"],
+            student["marks"]
+        )
+
+
+# Main Menu
+while True:
+
+    print("\n================================")
+    print(" STUDENT PERFORMANCE ANALYSIS")
+    print("================================")
+
+    print("1. Display Students")
+    print("2. Calculate Class Average")
+    print("3. Find Topper")
+    print("4. Show Passed Students")
+    print("5. Show Student Ranking")
+    print("6. Exit")
+
+    choice = input("\nEnter your choice: ")
+
+    if choice == "1":
+        display_students()
+
+    elif choice == "2":
+        calculate_average()
+
+    elif choice == "3":
+        find_topper()
+
+    elif choice == "4":
+        passed_students()
+
+    elif choice == "5":
+        sort_students()
+
+    elif choice == "6":
+        print("\nThank you for using the system!")
+        break
+
+    else:
+        print("\nInvalid choice! Please try again.")
+
 
