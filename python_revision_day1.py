@@ -8564,3 +8564,33 @@ while True:
         print("\nInvalid choice! Please try again.")
 
 
+
+
+# ==========================================
+# DAY 04 - NESTED LOOPS AND PATTERN PROGRAMMING
+# ==========================================
+
+# Q1. Square Pattern
+
+# Q2. Right Triangle Pattern
+
+# Q3. Number Triangle Pattern
+
+# Q4. Reverse Number Pattern
+
+# Q5. Multiplication Table Using Nested Loops
+
+# Q6. Pyramid Pattern
+
+# Q7. Hollow Square Pattern
+
+# Q8. Floyd's Triangle
+
+
+
+
+
+
+
+
+
