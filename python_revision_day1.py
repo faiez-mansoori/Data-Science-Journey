@@ -8588,6 +8588,155 @@ while True:
 
 
 
+# ==================================================
+# DAY 05 - STUDENT PERFORMANCE ANALYSIS
+# ==================================================
+
+students = []
+
+# Add Student
+def add_student():
+
+    name = input("Enter student name: ")
+
+    try:
+        marks = float(input("Enter marks: "))
+
+        if marks < 0 or marks > 100:
+            print("Invalid marks!")
+            return
+
+        student = {
+            "name": name,
+            "marks": marks
+        }
+
+        students.append(student)
+
+        print("Student added successfully!")
+
+    except ValueError:
+        print("Please enter valid marks!")
+
+
+# Display Students
+def display_students():
+
+    if len(students) == 0:
+        print("No student records found!")
+        return
+
+    for student in students:
+
+        print("Name:", student["name"])
+        print("Marks:", student["marks"])
+
+        if student["marks"] >= 90:
+            print("Grade: A+")
+
+        elif student["marks"] >= 75:
+            print("Grade: A")
+
+        elif student["marks"] >= 60:
+            print("Grade: B")
+
+        elif student["marks"] >= 40:
+            print("Grade: C")
+
+        else:
+            print("Grade: Fail")
+
+        print("----------------------")
+
+
+# Calculate Average
+def calculate_average():
+
+    if not students:
+        print("No records available!")
+        return
+
+    total = 0
+
+    for student in students:
+        total += student["marks"]
+
+    average = total / len(students)
+
+    print("Class Average:", round(average, 2))
+
+
+# Find Topper
+def find_topper():
+
+    if not students:
+        print("No records available!")
+        return
+
+    topper = max(students, key=lambda x: x["marks"])
+
+    print("Class Topper:", topper["name"])
+    print("Topper Marks:", topper["marks"])
+
+
+# Search Student
+def search_student():
+
+    name = input("Enter name to search: ").lower()
+
+    for student in students:
+
+        if student["name"].lower() == name:
+
+            print("Student Found!")
+            print(student)
+            return
+
+    print("Student Not Found!")
+
+
+# Main Menu
+def student_management():
+
+    while True:
+
+        print("\n===== STUDENT MANAGEMENT =====")
+        print("1. Add Student")
+        print("2. Display Students")
+        print("3. Calculate Average")
+        print("4. Find Topper")
+        print("5. Search Student")
+        print("6. Exit")
+
+        choice = input("Enter your choice: ")
+
+        if choice == "1":
+            add_student()
+
+        elif choice == "2":
+            display_students()
+
+        elif choice == "3":
+            calculate_average()
+
+        elif choice == "4":
+            find_topper()
+
+        elif choice == "5":
+            search_student()
+
+        elif choice == "6":
+            print("Thank You!")
+            break
+
+        else:
+            print("Invalid Choice!")
+
+
+# Start Program
+student_management()
+
+
 
 
 
