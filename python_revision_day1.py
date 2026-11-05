@@ -8739,6 +8739,251 @@ student_management()
 
 
 
+# ==========================================
+# STUDENT MARKS ANALYZER
+# Created by: Faiez Mansoori
+# ==========================================
+
+students = []
+
+def calculate_grade(average):
+    if average >= 90:
+        return "A+"
+    elif average >= 80:
+        return "A"
+    elif average >= 70:
+        return "B"
+    elif average >= 60:
+        return "C"
+    elif average >= 40:
+        return "D"
+    else:
+        return "Fail"
+
+
+def add_students():
+
+    total_students = int(input("Enter number of students: "))
+
+    for i in range(total_students):
+
+        print("\nStudent Number:", i + 1)
+
+        name = input("Enter student name: ")
+        marks = []
+
+        for j in range(3):
+            mark = float(input(f"Enter subject {j + 1} marks: "))
+
+            if mark < 0 or mark > 100:
+                print("Invalid marks! Enter between 0 and 100.")
+                return
+
+            marks.append(mark)
+
+        students.append({
+            "name": name,
+            "marks": marks
+        })
+
+
+def display_report():
+
+    print("\n========== STUDENT REPORT ==========")
+
+    for student in students:
+
+        total = sum(student["marks"])
+        average = total / len(student["marks"])
+        grade = calculate_grade(average)
+
+        print("\nName:", student["name"])
+        print("Marks:", student["marks"])
+        print("Total:", total)
+        print("Average:", round(average, 2))
+        print("Grade:", grade)
+
+
+def show_topper():
+
+    topper = max(
+        students,
+        key=lambda x: sum(x["marks"])
+    )
+
+    print("\nClass Topper:", topper["name"])
+    print("Total Marks:", sum(topper["marks"]))
+
+
+def main():
+
+    add_students()
+
+    if len(students) > 0:
+        display_report()
+        show_topper()
+
+    print("\nProject Completed Successfully!")
+
+
+main()
+
+
+
+
+
+# ==================================================
+# PROJECT: STUDENT PERFORMANCE DATA ANALYSIS
+# Created by: Faiez Mansoori
+# ==================================================
+
+# 1. Student Dataset
+
+students = [
+    {"name": "Rahul", "python": 85, "sql": 90, "maths": 78},
+    {"name": "Aman", "python": 70, "sql": 75, "maths": 80},
+    {"name": "Faiez", "python": 95, "sql": 92, "maths": 98},
+    {"name": "Rohit", "python": 45, "sql": 55, "maths": 60},
+    {"name": "Ankit", "python": 65, "sql": 72, "maths": 68},
+    {"name": "Priya", "python": 88, "sql": 85, "maths": 91}
+]
+
+# 2. Calculate Total and Average
+
+print("\n===== STUDENT PERFORMANCE ANALYSIS =====")
+
+for student in students:
+
+    total = (
+        student["python"]
+        + student["sql"]
+        + student["maths"]
+    )
+
+    average = total / 3
+
+    student["total"] = total
+    student["average"] = average
+
+    print("\nName:", student["name"])
+    print("Total Marks:", total)
+    print("Average:", round(average, 2))
+
+
+# 3. Grade Classification
+
+def calculate_grade(average):
+
+    if average >= 90:
+        return "A+"
+    elif average >= 80:
+        return "A"
+    elif average >= 70:
+        return "B"
+    elif average >= 60:
+        return "C"
+    elif average >= 40:
+        return "D"
+    else:
+        return "Fail"
+
+
+# 4. Add Grades
+
+for student in students:
+
+    student["grade"] = calculate_grade(
+        student["average"]
+    )
+
+
+# 5. Find Topper
+
+topper = max(
+    students,
+    key=lambda x: x["average"]
+)
+
+print("\n===== CLASS TOPPER =====")
+print("Name:", topper["name"])
+print("Average:", topper["average"])
+
+
+# 6. Find Lowest Performer
+
+lowest = min(
+    students,
+    key=lambda x: x["average"]
+)
+
+print("\n===== LOWEST PERFORMER =====")
+print("Name:", lowest["name"])
+print("Average:", lowest["average"])
+
+
+# 7. Calculate Class Average
+
+class_average = sum(
+    student["average"] for student in students
+) / len(students)
+
+print("\nClass Average:", round(class_average, 2))
+
+
+# 8. Count Pass and Fail Students
+
+passed = list(
+    filter(lambda x: x["average"] >= 40, students)
+)
+
+failed = list(
+    filter(lambda x: x["average"] < 40, students)
+)
+
+print("\nPassed Students:", len(passed))
+print("Failed Students:", len(failed))
+
+
+# 9. Subject-wise Average
+
+python_avg = sum(
+    student["python"] for student in students
+) / len(students)
+
+sql_avg = sum(
+    student["sql"] for student in students
+) / len(students)
+
+maths_avg = sum(
+    student["maths"] for student in students
+) / len(students)
+
+print("\n===== SUBJECT ANALYSIS =====")
+print("Python Average:", round(python_avg, 2))
+print("SQL Average:", round(sql_avg, 2))
+print("Maths Average:", round(maths_avg, 2))
+
+
+# 10. Final Student Report
+
+print("\n===== FINAL REPORT =====")
+
+for student in students:
+
+    print(
+        student["name"],
+        "| Average:", round(student["average"], 2),
+        "| Grade:", student["grade"]
+    )
+
+print("\nDATA ANALYSIS COMPLETED!")
+
+
+
+
+
+
+
 
 
 
