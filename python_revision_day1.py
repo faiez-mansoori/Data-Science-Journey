@@ -1302,6 +1302,129 @@
   {
    "cell_type": "code",
    
+
+
+
+
+
+# Student Performance Analyzer
+# Created by: Faiez Mansoori
+
+students = [
+    {"name": "Faiez", "marks": 85},
+    {"name": "Rahul", "marks": 72},
+    {"name": "Aman", "marks": 90},
+    {"name": "Priya", "marks": 45},
+    {"name": "Karan", "marks": 32},
+    {"name": "Neha", "marks": 95}
+]
+
+
+# Function to calculate average
+def calculate_average(data):
+    total = sum(student["marks"] for student in data)
+    return total / len(data)
+
+
+# Function to find topper
+def find_topper(data):
+    return max(data, key=lambda student: student["marks"])
+
+
+# Function to filter passed students
+def passed_students(data):
+    return list(filter(lambda student: student["marks"] >= 40, data))
+
+
+# Function to filter failed students
+def failed_students(data):
+    return list(filter(lambda student: student["marks"] < 40, data))
+
+
+# Function to assign grades
+def assign_grade(marks):
+    if marks >= 90:
+        return "A+"
+    elif marks >= 80:
+        return "A"
+    elif marks >= 70:
+        return "B"
+    elif marks >= 60:
+        return "C"
+    elif marks >= 40:
+        return "D"
+    else:
+        return "Fail"
+
+
+# Display all students
+print("=" * 40)
+print("   STUDENT PERFORMANCE ANALYZER")
+print("=" * 40)
+
+for student in students:
+    print(
+        student["name"],
+        "| Marks:", student["marks"],
+        "| Grade:", assign_grade(student["marks"])
+    )
+
+
+# Average marks
+average = calculate_average(students)
+print("\nClass Average:", round(average, 2))
+
+
+# Topper
+topper = find_topper(students)
+print("\nClass Topper:", topper["name"])
+print("Topper Marks:", topper["marks"])
+
+
+# Passed students
+passed = passed_students(students)
+print("\nPassed Students:")
+
+for student in passed:
+    print(student["name"], student["marks"])
+
+
+# Failed students
+failed = failed_students(students)
+print("\nFailed Students:")
+
+for student in failed:
+    print(student["name"], student["marks"])
+
+
+# Sort students by marks
+sorted_students = sorted(
+    students,
+    key=lambda student: student["marks"],
+    reverse=True
+)
+
+print("\nRanking (Highest to Lowest):")
+
+for rank, student in enumerate(sorted_students, start=1):
+    print(rank, student["name"], student["marks"])
+
+
+# Using map to get uppercase names
+names = list(map(lambda student: student["name"].upper(), students))
+
+print("\nStudent Names:", names)
+
+print("\nTotal Students:", len(students))
+print("Highest Marks:", max(student["marks"] for student in students))
+print("Lowest Marks:", min(student["marks"] for student in students))
+
+print("\n===== ANALYSIS COMPLETED =====")
+
+
+
+
+
    "id": "e6150f24-9775-48ed-ae4c-7a8917685043",
    "metadata": {},
    "outputs": [],
