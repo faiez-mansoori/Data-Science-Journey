@@ -1425,6 +1425,228 @@ print("\n===== ANALYSIS COMPLETED =====")
 
 
 
+
+
+
+# ==================================================
+# PROJECT: EMPLOYEE PERFORMANCE ANALYTICS SYSTEM
+# AUTHOR: FAIEZ MANSOORI
+# REPOSITORY: DATA SCIENCE JOURNEY
+# ==================================================
+
+# Employee Dataset
+
+employees = [
+    {"name": "Rahul", "department": "IT", "salary": 45000, "performance": 85},
+    {"name": "Aman", "department": "HR", "salary": 35000, "performance": 72},
+    {"name": "Priya", "department": "IT", "salary": 55000, "performance": 95},
+    {"name": "Neha", "department": "Finance", "salary": 40000, "performance": 68},
+    {"name": "Karan", "department": "HR", "salary": 38000, "performance": 90},
+    {"name": "Simran", "department": "Finance", "salary": 48000, "performance": 78}
+]
+
+
+# 1. Display Employee Details
+
+def display_employees():
+
+    print("\n========== EMPLOYEE DETAILS ==========")
+
+    for emp in employees:
+
+        print("Name:", emp["name"])
+        print("Department:", emp["department"])
+        print("Salary:", emp["salary"])
+        print("Performance:", emp["performance"])
+        print("--------------------------------------")
+
+
+# 2. Calculate Average Performance
+
+def average_performance():
+
+    total = 0
+
+    for emp in employees:
+        total += emp["performance"]
+
+    average = total / len(employees)
+
+    print("\nAverage Performance:", round(average, 2))
+
+
+# 3. Find Top Performer
+
+def top_performer():
+
+    top = max(employees, key=lambda x: x["performance"])
+
+    print("\n========== TOP PERFORMER ==========")
+    print("Name:", top["name"])
+    print("Department:", top["department"])
+    print("Performance:", top["performance"])
+
+
+# 4. Find Lowest Performer
+
+def lowest_performer():
+
+    lowest = min(employees, key=lambda x: x["performance"])
+
+    print("\n========== LOWEST PERFORMER ==========")
+    print("Name:", lowest["name"])
+    print("Department:", lowest["department"])
+    print("Performance:", lowest["performance"])
+
+
+# 5. Department Wise Analysis
+
+def department_analysis():
+
+    print("\n========== DEPARTMENT ANALYSIS ==========")
+
+    departments = {}
+
+    for emp in employees:
+
+        dept = emp["department"]
+
+        if dept not in departments:
+            departments[dept] = []
+
+        departments[dept].append(emp["performance"])
+
+    for dept, scores in departments.items():
+
+        avg = sum(scores) / len(scores)
+
+        print(dept, "Average Performance:", round(avg, 2))
+
+
+# 6. Performance Classification
+
+def performance_classification():
+
+    print("\n========== PERFORMANCE REPORT ==========")
+
+    for emp in employees:
+
+        score = emp["performance"]
+
+        if score >= 90:
+            grade = "Excellent"
+
+        elif score >= 80:
+            grade = "Very Good"
+
+        elif score >= 70:
+            grade = "Good"
+
+        else:
+            grade = "Needs Improvement"
+
+        print(emp["name"], ":", grade)
+
+
+# 7. Salary Analysis
+
+def salary_analysis():
+
+    total_salary = sum(emp["salary"] for emp in employees)
+
+    average_salary = total_salary / len(employees)
+
+    print("\n========== SALARY ANALYSIS ==========")
+
+    print("Total Salary:", total_salary)
+
+    print("Average Salary:", round(average_salary, 2))
+
+
+# 8. Sort Employees by Performance
+
+def sort_employees():
+
+    sorted_data = sorted(
+        employees,
+        key=lambda x: x["performance"],
+        reverse=True
+    )
+
+    print("\n========== PERFORMANCE RANKING ==========")
+
+    for rank, emp in enumerate(sorted_data, start=1):
+
+        print(
+            rank,
+            emp["name"],
+            "-",
+            emp["performance"]
+        )
+
+
+# 9. Count Employees Department Wise
+
+def department_employee_count():
+
+    print("\n========== EMPLOYEE COUNT ==========")
+
+    count = {}
+
+    for emp in employees:
+
+        dept = emp["department"]
+
+        if dept not in count:
+            count[dept] = 0
+
+        count[dept] += 1
+
+    for dept, total in count.items():
+
+        print(dept, ":", total, "Employees")
+
+
+# 10. Main Program
+
+def main():
+
+    print("\n========================================")
+    print("   EMPLOYEE PERFORMANCE ANALYTICS")
+    print("========================================")
+
+    display_employees()
+
+    average_performance()
+
+    top_performer()
+
+    lowest_performer()
+
+    department_analysis()
+
+    performance_classification()
+
+    salary_analysis()
+
+    sort_employees()
+
+    department_employee_count()
+
+    print("\n========================================")
+    print("       ANALYSIS COMPLETED")
+    print("========================================")
+
+
+# Execute Program
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+
    "id": "e6150f24-9775-48ed-ae4c-7a8917685043",
    "metadata": {},
    "outputs": [],
