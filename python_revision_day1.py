@@ -7825,6 +7825,76 @@ def filter_numbers(numbers):
 
 
 
+# ==========================================
+# DAY 09 - STUDENT PERFORMANCE DATA ANALYSIS
+# ==========================================
+
+students = {
+    "Rahul": 85,
+    "Aman": 72,
+    "Faiez": 92,
+    "Rohit": 45,
+    "Ankit": 60,
+    "Priya": 95,
+    "Neha": 38
+}
+
+total_marks = 0
+passed = 0
+failed = 0
+
+print("\nSTUDENT PERFORMANCE REPORT")
+print("=" * 40)
+
+for name, marks in students.items():
+
+    total_marks += marks
+
+    if marks >= 40:
+        result = "PASS"
+        passed += 1
+    else:
+        result = "FAIL"
+        failed += 1
+
+    if marks >= 90:
+        grade = "A+"
+    elif marks >= 80:
+        grade = "A"
+    elif marks >= 70:
+        grade = "B"
+    elif marks >= 60:
+        grade = "C"
+    elif marks >= 40:
+        grade = "D"
+    else:
+        grade = "F"
+
+    print(name, "|", marks, "|", grade, "|", result)
+
+average = total_marks / len(students)
+
+highest_student = max(students, key=students.get)
+lowest_student = min(students, key=students.get)
+
+print("\n" + "=" * 40)
+print("TOTAL STUDENTS:", len(students))
+print("TOTAL MARKS:", total_marks)
+print("AVERAGE MARKS:", round(average, 2))
+print("PASSED STUDENTS:", passed)
+print("FAILED STUDENTS:", failed)
+
+print("HIGHEST SCORER:", highest_student,
+      students[highest_student])
+
+print("LOWEST SCORER:", lowest_student,
+      students[lowest_student])
+
+print("=" * 40)
+print("ANALYSIS COMPLETED SUCCESSFULLY")
+
+
+
 
 
 
