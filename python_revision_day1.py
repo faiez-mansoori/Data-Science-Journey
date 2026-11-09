@@ -7895,6 +7895,118 @@ print("ANALYSIS COMPLETED SUCCESSFULLY")
 
 
 
+# ==========================================
+# DAY 10 - SALES DATA ANALYSIS
+# Python Data Science Project
+# ==========================================
+
+print("=" * 45)
+print("       DAILY SALES DATA ANALYSIS")
+print("=" * 45)
+
+# Sales Dataset
+sales_data = [
+    {"product": "Laptop", "category": "Electronics", "price": 50000, "quantity": 2},
+    {"product": "Mobile", "category": "Electronics", "price": 20000, "quantity": 5},
+    {"product": "Headphones", "category": "Accessories", "price": 1500, "quantity": 10},
+    {"product": "Keyboard", "category": "Accessories", "price": 2000, "quantity": 4},
+    {"product": "Monitor", "category": "Electronics", "price": 12000, "quantity": 3},
+    {"product": "Mouse", "category": "Accessories", "price": 800, "quantity": 8},
+    {"product": "Tablet", "category": "Electronics", "price": 25000, "quantity": 2}
+]
+
+# 1. Calculate Total Revenue
+total_revenue = 0
+total_quantity = 0
+
+for item in sales_data:
+    revenue = item["price"] * item["quantity"]
+    item["revenue"] = revenue
+
+    total_revenue += revenue
+    total_quantity += item["quantity"]
+
+print("\n1. PRODUCT SALES REPORT")
+print("-" * 45)
+
+for item in sales_data:
+    print(
+        item["product"],
+        "| Quantity:", item["quantity"],
+        "| Revenue: Rs.", item["revenue"]
+    )
+
+# 2. Total Sales
+print("\n2. TOTAL SALES")
+print("-" * 45)
+print("Total Revenue: Rs.", total_revenue)
+print("Total Items Sold:", total_quantity)
+
+# 3. Average Revenue
+average_revenue = total_revenue / len(sales_data)
+
+print("\n3. AVERAGE REVENUE")
+print("-" * 45)
+print("Average Revenue: Rs.", round(average_revenue, 2))
+
+# 4. Highest Revenue Product
+highest_product = max(sales_data, key=lambda x: x["revenue"])
+
+print("\n4. HIGHEST SELLING PRODUCT BY REVENUE")
+print("-" * 45)
+print("Product:", highest_product["product"])
+print("Revenue: Rs.", highest_product["revenue"])
+
+# 5. Lowest Revenue Product
+lowest_product = min(sales_data, key=lambda x: x["revenue"])
+
+print("\n5. LOWEST SELLING PRODUCT BY REVENUE")
+print("-" * 45)
+print("Product:", lowest_product["product"])
+print("Revenue: Rs.", lowest_product["revenue"])
+
+# 6. Category Wise Revenue
+category_revenue = {}
+
+for item in sales_data:
+    category = item["category"]
+
+    if category in category_revenue:
+        category_revenue[category] += item["revenue"]
+    else:
+        category_revenue[category] = item["revenue"]
+
+print("\n6. CATEGORY WISE REVENUE")
+print("-" * 45)
+
+for category, revenue in category_revenue.items():
+    print(category, ": Rs.", revenue)
+
+# 7. Products Above Average Revenue
+print("\n7. ABOVE AVERAGE REVENUE PRODUCTS")
+print("-" * 45)
+
+for item in sales_data:
+    if item["revenue"] > average_revenue:
+        print(item["product"], ":", item["revenue"])
+
+# 8. Final Business Summary
+print("\n8. FINAL BUSINESS SUMMARY")
+print("-" * 45)
+
+print("Total Products:", len(sales_data))
+print("Total Quantity Sold:", total_quantity)
+print("Total Business Revenue: Rs.", total_revenue)
+
+print("\nAnalysis Completed Successfully!")
+print("=" * 45)
+
+
+
+
+
+
+
 
 
 
