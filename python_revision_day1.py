@@ -8002,6 +8002,80 @@ print("\nAnalysis Completed Successfully!")
 print("=" * 45)
 
 
+# ==========================================
+# DAY 10 - STUDENT PERFORMANCE ANALYSIS
+# Data Science Journey
+# ==========================================
+
+students = {
+    "Rahul": [85, 90, 78],
+    "Aman": [72, 80, 75],
+    "Faiez": [95, 92, 98],
+    "Priya": [65, 70, 68],
+    "Rohit": [88, 85, 90]
+}
+
+
+def calculate_average(marks):
+    return sum(marks) / len(marks)
+
+
+def calculate_grade(average):
+
+    if average >= 90:
+        return "A+"
+    elif average >= 80:
+        return "A"
+    elif average >= 70:
+        return "B"
+    elif average >= 60:
+        return "C"
+    else:
+        return "Fail"
+
+
+print("=" * 45)
+print("     STUDENT PERFORMANCE ANALYSIS")
+print("=" * 45)
+
+total_marks = 0
+total_students = len(students)
+topper_name = ""
+highest_average = 0
+
+for name, marks in students.items():
+
+    average = calculate_average(marks)
+    grade = calculate_grade(average)
+
+    total_marks += sum(marks)
+
+    print("\nStudent Name:", name)
+    print("Marks:", marks)
+    print("Total Marks:", sum(marks))
+    print("Average:", round(average, 2))
+    print("Grade:", grade)
+
+    if average > highest_average:
+        highest_average = average
+        topper_name = name
+
+
+overall_average = total_marks / (total_students * 3)
+
+print("\n" + "=" * 45)
+print("           FINAL REPORT")
+print("=" * 45)
+
+print("Total Students:", total_students)
+print("Overall Average:", round(overall_average, 2))
+print("Class Topper:", topper_name)
+print("Highest Average:", highest_average)
+
+print("=" * 45)
+
+
+
 
 
 
