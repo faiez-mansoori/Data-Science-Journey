@@ -8077,6 +8077,97 @@ print("=" * 45)
 
 
 
+# ==========================================
+# DAY 12 - STUDENT PERFORMANCE DATA ANALYSIS
+# Author: Faiez Mansoori
+# ==========================================
+
+students = {
+    "Rahul": 85,
+    "Aman": 72,
+    "Faiez": 92,
+    "Priya": 65,
+    "Karan": 38,
+    "Neha": 95,
+    "Arjun": 55
+}
+
+# Function to calculate average marks
+def calculate_average(marks):
+    return sum(marks) / len(marks)
+
+
+# Function to calculate grade
+def calculate_grade(marks):
+    if marks >= 90:
+        return "A+"
+    elif marks >= 80:
+        return "A"
+    elif marks >= 70:
+        return "B"
+    elif marks >= 60:
+        return "C"
+    elif marks >= 40:
+        return "D"
+    else:
+        return "Fail"
+
+
+# Display student performance
+print("=" * 45)
+print("       STUDENT PERFORMANCE REPORT")
+print("=" * 45)
+
+for name, marks in students.items():
+    grade = calculate_grade(marks)
+
+    print(f"Name: {name}")
+    print(f"Marks: {marks}")
+    print(f"Grade: {grade}")
+    print("-" * 30)
+
+
+# Calculate statistics
+all_marks = list(students.values())
+
+average = calculate_average(all_marks)
+highest = max(all_marks)
+lowest = min(all_marks)
+
+topper = max(students, key=students.get)
+lowest_student = min(students, key=students.get)
+
+passed = 0
+failed = 0
+
+for marks in all_marks:
+    if marks >= 40:
+        passed += 1
+    else:
+        failed += 1
+
+
+# Final analysis
+print("\n========== FINAL ANALYSIS ==========")
+print("Total Students:", len(students))
+print("Average Marks:", round(average, 2))
+print("Highest Marks:", highest)
+print("Lowest Marks:", lowest)
+print("Topper:", topper)
+print("Lowest Performer:", lowest_student)
+print("Passed Students:", passed)
+print("Failed Students:", failed)
+
+print("=" * 45)
+print("       ANALYSIS COMPLETED")
+print("=" * 45)
+
+
+
+
+
+
+
 
 
 
