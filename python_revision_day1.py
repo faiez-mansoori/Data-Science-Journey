@@ -8167,6 +8167,63 @@ print("=" * 45)
 
 
 
+# ==========================================
+# DAY 12 - SALES DATA ANALYSIS
+# Author: Faiez Mansoori
+# Project: Data Science Journey
+# ==========================================
+
+sales = {
+    "Monday": 1200,
+    "Tuesday": 2500,
+    "Wednesday": 1800,
+    "Thursday": 3000,
+    "Friday": 2200,
+    "Saturday": 4000,
+    "Sunday": 3500
+}
+
+# Total Sales
+total_sales = sum(sales.values())
+
+# Average Sales
+average_sales = total_sales / len(sales)
+
+# Highest and Lowest Sales
+highest_day = max(sales, key=sales.get)
+lowest_day = min(sales, key=sales.get)
+
+# Count Days Above Average
+above_average = 0
+
+for day, amount in sales.items():
+    if amount > average_sales:
+        above_average += 1
+
+# Display Report
+print("=" * 40)
+print("       WEEKLY SALES ANALYSIS")
+print("=" * 40)
+
+for day, amount in sales.items():
+    print(f"{day}: Rs. {amount}")
+
+print("-" * 40)
+print("Total Sales:", total_sales)
+print("Average Sales:", average_sales)
+print("Highest Sales Day:", highest_day)
+print("Lowest Sales Day:", lowest_day)
+print("Days Above Average:", above_average)
+
+print("=" * 40)
+print("       ANALYSIS COMPLETED")
+print("=" * 40)
+
+
+
+
+
+
 
 
 
