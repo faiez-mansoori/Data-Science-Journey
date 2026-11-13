@@ -8221,6 +8221,78 @@ print("=" * 40)
 
 
 
+# ==========================================
+# DAY 13: STUDENT PERFORMANCE ANALYSIS
+# ==========================================
+
+students = [
+    {"name": "Faiez", "marks": 85},
+    {"name": "Rahul", "marks": 72},
+    {"name": "Aman", "marks": 90},
+    {"name": "Sahil", "marks": 65},
+    {"name": "Arjun", "marks": 78}
+]
+
+def calculate_average(students):
+    total = 0
+
+    for student in students:
+        total += student["marks"]
+
+    return total / len(students)
+
+
+def find_topper(students):
+    topper = students[0]
+
+    for student in students:
+        if student["marks"] > topper["marks"]:
+            topper = student
+
+    return topper
+
+
+def analyze_students(students):
+
+    print("\nSTUDENT PERFORMANCE REPORT")
+    print("=" * 35)
+
+    for student in students:
+
+        marks = student["marks"]
+
+        if marks >= 90:
+            grade = "A+"
+        elif marks >= 80:
+            grade = "A"
+        elif marks >= 70:
+            grade = "B"
+        elif marks >= 60:
+            grade = "C"
+        else:
+            grade = "D"
+
+        print("Name:", student["name"])
+        print("Marks:", marks)
+        print("Grade:", grade)
+        print("-" * 25)
+
+    average = calculate_average(students)
+    topper = find_topper(students)
+
+    print("\nCLASS AVERAGE:", round(average, 2))
+    print("TOPPER:", topper["name"])
+    print("TOPPER MARKS:", topper["marks"])
+
+
+analyze_students(students)
+
+
+
+
+
+
+
 
 
 
