@@ -8304,6 +8304,99 @@ Grade: B
 -------------------------
 
 Name: Aman
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ==========================================
+# DAY 15 - STUDENT PERFORMANCE ANALYSIS
+# Data Science Journey
+# ==========================================
+
+students = [
+    {"name": "Rahul", "marks": [85, 90, 78]},
+    {"name": "Aman", "marks": [65, 70, 60]},
+    {"name": "Faiez", "marks": [95, 92, 88]},
+    {"name": "Rohit", "marks": [35, 40, 45]},
+    {"name": "Karan", "marks": [75, 80, 72]}
+]
+
+
+def calculate_average(marks):
+    return sum(marks) / len(marks)
+
+
+def calculate_grade(average):
+
+    if average >= 90:
+        return "A+"
+    elif average >= 80:
+        return "A"
+    elif average >= 70:
+        return "B"
+    elif average >= 60:
+        return "C"
+    elif average >= 40:
+        return "D"
+    else:
+        return "Fail"
+
+
+print("=" * 50)
+print("       STUDENT PERFORMANCE ANALYSIS")
+print("=" * 50)
+
+total_marks = 0
+top_student = ""
+highest_average = 0
+
+for student in students:
+
+    name = student["name"]
+    marks = student["marks"]
+
+    average = calculate_average(marks)
+    grade = calculate_grade(average)
+
+    total_marks += average
+
+    if average > highest_average:
+        highest_average = average
+        top_student = name
+
+    print("\nStudent Name:", name)
+    print("Marks:", marks)
+    print("Average:", round(average, 2))
+    print("Grade:", grade)
+
+    if grade == "Fail":
+        print("Status: Needs Improvement")
+    else:
+        print("Status: Passed")
+
+
+class_average = total_marks / len(students)
+
+print("\n" + "=" * 50)
+print("           FINAL ANALYSIS")
+print("=" * 50)
+
+print("Total Students:", len(students))
+print("Class Average:", round(class_average, 2))
+print("Top Student:", top_student)
+print("Highest Average:", round(highest_average, 2))
+
+print("\nAnalysis Completed Successfully!")
+
 Marks: 90
 Grade: A+
 -------------------------
