@@ -8290,6 +8290,45 @@ analyze_students(students)
 
 
 
+STUDENT PERFORMANCE REPORT
+===================================
+
+Name: Faiez
+Marks: 85
+Grade: A
+-------------------------
+
+Name: Rahul
+Marks: 72
+Grade: B
+-------------------------
+
+Name: Aman
+Marks: 90
+Grade: A+
+-------------------------
+
+Name: Sahil
+Marks: 65
+Grade: C
+-------------------------
+
+Name: Arjun
+Marks: 78
+Grade: B
+-------------------------
+
+CLASS AVERAGE: 78.0
+TOPPER: Aman
+TOPPER MARKS: 90
+
+
+
+
+
+
+
+
 
 
 
