@@ -8397,6 +8397,115 @@ print("Highest Average:", round(highest_average, 2))
 
 print("\nAnalysis Completed Successfully!")
 
+
+
+
+
+# ==========================================
+# DAY 15 - SALES DATA ANALYSIS SYSTEM
+# ==========================================
+
+sales_data = [
+    {"product": "Laptop", "sales": 75000, "quantity": 5},
+    {"product": "Mobile", "sales": 50000, "quantity": 10},
+    {"product": "Tablet", "sales": 30000, "quantity": 4},
+    {"product": "Keyboard", "sales": 10000, "quantity": 15},
+    {"product": "Mouse", "sales": 5000, "quantity": 20}
+]
+
+
+# 1. Display All Sales Records
+
+def display_sales():
+    print("\n===== SALES RECORDS =====")
+
+    for item in sales_data:
+        print("Product:", item["product"])
+        print("Sales:", item["sales"])
+        print("Quantity:", item["quantity"])
+        print("------------------------")
+
+
+# 2. Calculate Total Sales
+
+def total_sales():
+    total = 0
+
+    for item in sales_data:
+        total += item["sales"]
+
+    print("\nTotal Sales:", total)
+
+
+# 3. Calculate Average Sales
+
+def average_sales():
+    total = 0
+
+    for item in sales_data:
+        total += item["sales"]
+
+    average = total / len(sales_data)
+
+    print("Average Sales:", average)
+
+
+# 4. Find Highest Sales
+
+def highest_sales():
+    highest = sales_data[0]
+
+    for item in sales_data:
+        if item["sales"] > highest["sales"]:
+            highest = item
+
+    print("\nHighest Selling Product:", highest["product"])
+    print("Sales Amount:", highest["sales"])
+
+
+# 5. Find Lowest Sales
+
+def lowest_sales():
+    lowest = sales_data[0]
+
+    for item in sales_data:
+        if item["sales"] < lowest["sales"]:
+            lowest = item
+
+    print("\nLowest Selling Product:", lowest["product"])
+    print("Sales Amount:", lowest["sales"])
+
+
+# 6. Sales Performance
+
+def sales_performance():
+    print("\n===== SALES PERFORMANCE =====")
+
+    for item in sales_data:
+
+        if item["sales"] >= 50000:
+            print(item["product"], "- Excellent")
+
+        elif item["sales"] >= 20000:
+            print(item["product"], "- Good")
+
+        else:
+            print(item["product"], "- Needs Improvement")
+
+
+# 7. Main Program
+
+display_sales()
+total_sales()
+average_sales()
+highest_sales()
+lowest_sales()
+sales_performance()
+
+print("\nSales Data Analysis Completed!")
+
+
+
 Marks: 90
 Grade: A+
 -------------------------
