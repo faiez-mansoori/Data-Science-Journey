@@ -8506,6 +8506,161 @@ print("\nSales Data Analysis Completed!")
 
 
 
+
+
+# ==========================================
+# DAY 16 - STUDENT PERFORMANCE ANALYSIS
+# ==========================================
+
+students = [
+    {"name": "Faiez", "python": 90, "sql": 85, "statistics": 88},
+    {"name": "Rahul", "python": 75, "sql": 80, "statistics": 70},
+    {"name": "Aman", "python": 95, "sql": 92, "statistics": 96},
+    {"name": "Ali", "python": 60, "sql": 65, "statistics": 72},
+    {"name": "Rohan", "python": 45, "sql": 55, "statistics": 50}
+]
+
+
+# 1. Calculate Total Marks
+
+def calculate_total(student):
+    return (
+        student["python"]
+        + student["sql"]
+        + student["statistics"]
+    )
+
+
+# 2. Calculate Average Marks
+
+def calculate_average(student):
+    return calculate_total(student) / 3
+
+
+# 3. Find Student Grade
+
+def calculate_grade(average):
+
+    if average >= 90:
+        return "A+"
+    elif average >= 80:
+        return "A"
+    elif average >= 70:
+        return "B"
+    elif average >= 60:
+        return "C"
+    elif average >= 40:
+        return "D"
+    else:
+        return "Fail"
+
+
+# 4. Display Student Reports
+
+def display_reports():
+
+    print("\n===== STUDENT REPORTS =====")
+
+    for student in students:
+
+        total = calculate_total(student)
+        average = calculate_average(student)
+        grade = calculate_grade(average)
+
+        print("\nName:", student["name"])
+        print("Total Marks:", total)
+        print("Average:", round(average, 2))
+        print("Grade:", grade)
+
+
+# 5. Find Topper
+
+def find_topper():
+
+    topper = max(students, key=calculate_total)
+
+    print("\n===== CLASS TOPPER =====")
+    print("Name:", topper["name"])
+    print("Total Marks:", calculate_total(topper))
+
+
+# 6. Calculate Subject Averages
+
+def subject_analysis():
+
+    subjects = ["python", "sql", "statistics"]
+
+    print("\n===== SUBJECT ANALYSIS =====")
+
+    for subject in subjects:
+
+        total = 0
+
+        for student in students:
+            total += student[subject]
+
+        average = total / len(students)
+
+        print(subject.upper(), "Average:", round(average, 2))
+
+
+# 7. Count Passed and Failed Students
+
+def pass_fail_analysis():
+
+    passed = 0
+    failed = 0
+
+    for student in students:
+
+        average = calculate_average(student)
+
+        if average >= 40:
+            passed += 1
+        else:
+            failed += 1
+
+    print("\n===== PASS / FAIL REPORT =====")
+    print("Passed Students:", passed)
+    print("Failed Students:", failed)
+
+
+# 8. Ranking System
+
+def student_ranking():
+
+    ranking = sorted(
+        students,
+        key=calculate_total,
+        reverse=True
+    )
+
+    print("\n===== STUDENT RANKING =====")
+
+    for position, student in enumerate(ranking, start=1):
+
+        print(
+            position,
+            student["name"],
+            calculate_total(student)
+        )
+
+
+# 9. Main Program
+
+display_reports()
+find_topper()
+subject_analysis()
+pass_fail_analysis()
+student_ranking()
+
+print("\nSTUDENT ANALYSIS COMPLETED!")
+
+
+
+
+
+
 Marks: 90
 Grade: A+
 -------------------------
