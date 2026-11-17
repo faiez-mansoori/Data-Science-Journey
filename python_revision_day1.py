@@ -8635,6 +8635,79 @@ def student_ranking():
         reverse=True
     )
 
+
+
+# ==========================================
+# DAY 17 - EMPLOYEE SALARY ANALYSIS
+# Data Science Journey
+# ==========================================
+
+employees = [
+    {"name": "Rahul", "salary": 35000, "department": "IT"},
+    {"name": "Aman", "salary": 45000, "department": "HR"},
+    {"name": "Faiez", "salary": 55000, "department": "IT"},
+    {"name": "Priya", "salary": 60000, "department": "Finance"},
+    {"name": "Karan", "salary": 40000, "department": "HR"},
+    {"name": "Neha", "salary": 70000, "department": "IT"}
+]
+
+def calculate_average(data):
+    total = sum(emp["salary"] for emp in data)
+    return total / len(data)
+
+def highest_salary(data):
+    return max(data, key=lambda emp: emp["salary"])
+
+def lowest_salary(data):
+    return min(data, key=lambda emp: emp["salary"])
+
+def department_analysis(data):
+    departments = {}
+
+    for emp in data:
+        dept = emp["department"]
+
+        if dept not in departments:
+            departments[dept] = []
+
+        departments[dept].append(emp["salary"])
+
+    for dept, salaries in departments.items():
+        print(dept, "Average Salary:", sum(salaries) / len(salaries))
+
+print("=" * 45)
+print("       EMPLOYEE SALARY ANALYSIS")
+print("=" * 45)
+
+print("Total Employees:", len(employees))
+print("Average Salary:", calculate_average(employees))
+
+high = highest_salary(employees)
+low = lowest_salary(employees)
+
+print("\nHighest Paid Employee:", high["name"])
+print("Highest Salary:", high["salary"])
+
+print("\nLowest Paid Employee:", low["name"])
+print("Lowest Salary:", low["salary"])
+
+print("\nDepartment Wise Analysis:")
+department_analysis(employees)
+
+print("\nEmployees Earning Above 45000:")
+
+for emp in employees:
+    if emp["salary"] > 45000:
+        print(emp["name"], emp["salary"])
+
+print("=" * 45)
+print("Analysis Completed Successfully!")
+
+
+
+
+
+
     print("\n===== STUDENT RANKING =====")
 
     for position, student in enumerate(ranking, start=1):
