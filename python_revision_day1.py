@@ -8968,6 +8968,136 @@ print("Analysis Completed Successfully!")
 
 
 
+# Employee Salary Data Analysis
+# Day 19 - Data Science Journey
+
+employees = {
+    "Rahul": 35000,
+    "Aman": 45000,
+    "Priya": 55000,
+    "Neha": 40000,
+    "Karan": 60000,
+    "Simran": 50000
+}
+
+print("=" * 40)
+print("EMPLOYEE SALARY ANALYSIS")
+print("=" * 40)
+
+# Display all employees
+for name, salary in employees.items():
+    print(name, ":", salary)
+
+# Calculate total salary
+total_salary = sum(employees.values())
+
+# Calculate average salary
+average_salary = total_salary / len(employees)
+
+# Highest salary
+highest_salary = max(employees.values())
+
+# Lowest salary
+lowest_salary = min(employees.values())
+
+# Employee with highest salary
+highest_employee = max(employees, key=employees.get)
+
+print("\nTotal Salary:", total_salary)
+print("Average Salary:", average_salary)
+print("Highest Salary:", highest_salary)
+print("Lowest Salary:", lowest_salary)
+print("Highest Paid Employee:", highest_employee)
+
+# Employees earning above average
+print("\nEmployees Above Average Salary:")
+
+for name, salary in employees.items():
+    if salary > average_salary:
+        print(name, salary)
+
+print("\nAnalysis Completed Successfully!")
+
+
+
+
+
+
+
+# Day 20 - Student Performance Analysis
+
+students = {
+    "Rahul": 85,
+    "Aman": 72,
+    "Priya": 95,
+    "Neha": 64,
+    "Karan": 38,
+    "Simran": 89,
+    "Rohit": 55
+}
+
+print("=" * 45)
+print("STUDENT PERFORMANCE ANALYSIS")
+print("=" * 45)
+
+# Total students
+total_students = len(students)
+
+# Total marks
+total_marks = sum(students.values())
+
+# Average marks
+average_marks = total_marks / total_students
+
+# Highest marks
+highest_marks = max(students.values())
+
+# Lowest marks
+lowest_marks = min(students.values())
+
+# Topper
+topper = max(students, key=students.get)
+
+print("\nTotal Students:", total_students)
+print("Total Marks:", total_marks)
+print("Average Marks:", round(average_marks, 2))
+print("Highest Marks:", highest_marks)
+print("Lowest Marks:", lowest_marks)
+print("Class Topper:", topper)
+
+# Student Results
+print("\nSTUDENT RESULTS")
+
+for name, marks in students.items():
+
+    if marks >= 90:
+        grade = "A+"
+    elif marks >= 80:
+        grade = "A"
+    elif marks >= 70:
+        grade = "B"
+    elif marks >= 60:
+        grade = "C"
+    elif marks >= 40:
+        grade = "D"
+    else:
+        grade = "Fail"
+
+    print(name, ":", marks, "-", grade)
+
+# Above Average Students
+print("\nABOVE AVERAGE STUDENTS")
+
+for name, marks in students.items():
+    if marks > average_marks:
+        print(name, marks)
+
+print("\nAnalysis Completed Successfully!")
+
+s
+
+
+
 
 
 
