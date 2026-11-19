@@ -9098,6 +9098,61 @@ s
 
 
 
+# Day 20: Employee Salary Analysis
+
+print("=" * 45)
+print("       EMPLOYEE SALARY ANALYSIS")
+print("=" * 45)
+
+employees = {
+    "Rahul": 35000,
+    "Aman": 45000,
+    "Faiez": 50000,
+    "Priya": 40000,
+    "Rohit": 30000
+}
+
+total_salary = sum(employees.values())
+total_employees = len(employees)
+
+average_salary = total_salary / total_employees
+highest_salary = max(employees.values())
+lowest_salary = min(employees.values())
+
+highest_employee = max(employees, key=employees.get)
+lowest_employee = min(employees, key=employees.get)
+
+print("\nEmployee Salary Details:")
+
+for name, salary in employees.items():
+    print(name, ":", salary)
+
+print("\nTotal Employees:", total_employees)
+print("Total Salary:", total_salary)
+print("Average Salary:", average_salary)
+
+print("Highest Salary:", highest_salary)
+print("Highest Paid Employee:", highest_employee)
+
+print("Lowest Salary:", lowest_salary)
+print("Lowest Paid Employee:", lowest_employee)
+
+print("\nSalary Above Average:")
+
+for name, salary in employees.items():
+    if salary > average_salary:
+        print(name, ":", salary)
+
+print("\nAnalysis Completed Successfully!")
+
+
+
+
+
+
+
+
+
 
 
 
