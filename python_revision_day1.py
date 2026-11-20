@@ -9145,6 +9145,71 @@ for name, salary in employees.items():
 
 print("\nAnalysis Completed Successfully!")
 
+# Day 17: Employee Salary Data Analysis
+
+employees = {
+    "Rahul": 35000,
+    "Aman": 45000,
+    "Faiez": 50000,
+    "Karan": 30000,
+    "Priya": 60000,
+    "Neha": 40000
+}
+
+# Display Employee Details
+print("EMPLOYEE SALARY REPORT")
+print("-" * 40)
+
+for name, salary in employees.items():
+    print(name, ":", salary)
+
+# Total Salary
+total_salary = sum(employees.values())
+print("\nTotal Salary:", total_salary)
+
+# Average Salary
+average_salary = total_salary / len(employees)
+print("Average Salary:", average_salary)
+
+# Highest Salary
+highest_salary = max(employees.values())
+print("Highest Salary:", highest_salary)
+
+# Lowest Salary
+lowest_salary = min(employees.values())
+print("Lowest Salary:", lowest_salary)
+
+# Find Highest Paid Employee
+top_employee = max(employees, key=employees.get)
+print("Top Employee:", top_employee)
+
+# Salary Classification
+print("\nSALARY CLASSIFICATION")
+
+for name, salary in employees.items():
+
+    if salary >= 50000:
+        print(name, "- High Salary")
+
+    elif salary >= 40000:
+        print(name, "- Medium Salary")
+
+    else:
+        print(name, "- Low Salary")
+
+# Sort Employees by Salary
+print("\nEMPLOYEE RANKING")
+
+sorted_employees = sorted(
+    employees.items(),
+    key=lambda x: x[1],
+    reverse=True
+)
+
+for rank, (name, salary) in enumerate(sorted_employees, start=1):
+    print(rank, name, salary)
+
+print("\nAnalysis Completed Successfully!")
 
 
 
