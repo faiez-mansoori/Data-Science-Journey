@@ -9214,6 +9214,80 @@ print("\nAnalysis Completed Successfully!")
 
 
 
+# ==========================================
+# DAY 21: STUDENT PERFORMANCE ANALYSIS
+# Author: Faiez Mansoori
+# Project: Data-Science-Journey
+# ==========================================
+
+students = [
+    {"name": "Rahul", "marks": 85},
+    {"name": "Aman", "marks": 72},
+    {"name": "Faiez", "marks": 92},
+    {"name": "Rohit", "marks": 45},
+    {"name": "Ankit", "marks": 65},
+    {"name": "Karan", "marks": 38}
+]
+
+def calculate_average(data):
+    total = 0
+
+    for student in data:
+        total += student["marks"]
+
+    return total / len(data)
+
+
+def find_topper(data):
+    topper = data[0]
+
+    for student in data:
+        if student["marks"] > topper["marks"]:
+            topper = student
+
+    return topper
+
+
+def analyze_students(data):
+
+    passed = 0
+    failed = 0
+
+    print("\nSTUDENT PERFORMANCE REPORT")
+    print("=" * 40)
+
+    for student in data:
+
+        name = student["name"]
+        marks = student["marks"]
+
+        if marks >= 40:
+            result = "PASS"
+            passed += 1
+        else:
+            result = "FAIL"
+            failed += 1
+
+        print(name, ":", marks, "-", result)
+
+    print("=" * 40)
+
+    average = calculate_average(data)
+    topper = find_topper(data)
+
+    print("Total Students:", len(data))
+    print("Passed Students:", passed)
+    print("Failed Students:", failed)
+    print("Class Average:", round(average, 2))
+
+    print("Topper:", topper["name"])
+    print("Highest Marks:", topper["marks"])
+
+
+analyze_students(students)
+
+
+
 
 
 
