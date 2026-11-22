@@ -9288,6 +9288,70 @@ analyze_students(students)
 
 
 
+# ==========================================
+# DAY 23: SALES DATA ANALYSIS SYSTEM
+# Author: Faiez Mansoori
+# ==========================================
+
+sales_data = {
+    "Monday": 5000,
+    "Tuesday": 7500,
+    "Wednesday": 6200,
+    "Thursday": 9000,
+    "Friday": 8500,
+    "Saturday": 12000,
+    "Sunday": 10000
+}
+
+# Calculate Total Sales
+def calculate_total(data):
+    total = sum(data.values())
+    return total
+
+# Calculate Average Sales
+def calculate_average(data):
+    average = calculate_total(data) / len(data)
+    return average
+
+# Find Highest Sales
+def highest_sales(data):
+    day = max(data, key=data.get)
+    return day, data[day]
+
+# Find Lowest Sales
+def lowest_sales(data):
+    day = min(data, key=data.get)
+    return day, data[day]
+
+# Display Sales Report
+print("=" * 40)
+print("       WEEKLY SALES REPORT")
+print("=" * 40)
+
+for day, amount in sales_data.items():
+    print(day, ":", amount)
+
+print("-" * 40)
+
+print("Total Sales:", calculate_total(sales_data))
+print("Average Sales:", calculate_average(sales_data))
+
+high_day, high_amount = highest_sales(sales_data)
+print("Highest Sales:", high_day, high_amount)
+
+low_day, low_amount = lowest_sales(sales_data)
+print("Lowest Sales:", low_day, low_amount)
+
+print("=" * 40)
+print("Analysis Completed Successfully!")
+
+
+
+
+
+
+
+
 
 
 
