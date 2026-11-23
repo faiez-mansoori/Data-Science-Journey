@@ -9348,6 +9348,73 @@ print("Analysis Completed Successfully!")
 
 
 
+# ==========================================
+# DAY 24 - SALES DATA ANALYSIS
+# Data Science Journey
+# ==========================================
+
+print("=" * 45)
+print("       SALES DATA ANALYSIS SYSTEM")
+print("=" * 45)
+
+sales = {
+    "Monday": 1200,
+    "Tuesday": 1800,
+    "Wednesday": 1500,
+    "Thursday": 2200,
+    "Friday": 3000,
+    "Saturday": 3500,
+    "Sunday": 2500
+}
+
+# Display Daily Sales
+print("\nDAILY SALES REPORT")
+
+for day, amount in sales.items():
+    print(day, ":", amount)
+
+# Total Sales
+total_sales = sum(sales.values())
+
+# Average Sales
+average_sales = total_sales / len(sales)
+
+# Highest Sales
+highest_day = max(sales, key=sales.get)
+
+# Lowest Sales
+lowest_day = min(sales, key=sales.get)
+
+# Business Report
+print("\n" + "=" * 45)
+print("          WEEKLY BUSINESS REPORT")
+print("=" * 45)
+
+print("Total Sales:", total_sales)
+print("Average Sales:", average_sales)
+print("Highest Sales Day:", highest_day)
+print("Highest Sales:", sales[highest_day])
+print("Lowest Sales Day:", lowest_day)
+print("Lowest Sales:", sales[lowest_day])
+
+# Business Performance
+if average_sales >= 2000:
+    print("Business Performance: GOOD")
+else:
+    print("Business Performance: NEEDS IMPROVEMENT")
+
+print("\nAnalysis Completed Successfully!")
+print("=" * 45)
+
+
+
+
+
+
+
+
+
+
 
 
 
