@@ -9410,6 +9410,61 @@ print("=" * 45)
 
 
 
+# ==========================================
+# DAY 25: SALES DATA ANALYSIS
+# Author: Faiez Mansoori
+# Date: 24 November 2026
+# ==========================================
+
+sales_data = [
+    {"product": "Laptop", "sales": 55000},
+    {"product": "Mobile", "sales": 25000},
+    {"product": "Keyboard", "sales": 1500},
+    {"product": "Mouse", "sales": 800},
+    {"product": "Monitor", "sales": 12000}
+]
+
+def analyze_sales(data):
+
+    total_sales = 0
+
+    print("\n===== SALES REPORT =====")
+
+    for item in data:
+        print("Product:", item["product"])
+        print("Sales: Rs.", item["sales"])
+
+        total_sales += item["sales"]
+
+        if item["sales"] < 10000:
+            print("Low Selling Product:", item["product"])
+
+    average_sales = total_sales / len(data)
+
+    highest_sale = max(data, key=lambda x: x["sales"])
+    lowest_sale = min(data, key=lambda x: x["sales"])
+
+    print("\n===== FINAL ANALYSIS =====")
+    print("Total Products:", len(data))
+    print("Total Sales:", total_sales)
+    print("Average Sales:", average_sales)
+
+    print("Highest Selling:", highest_sale["product"])
+    print("Lowest Selling:", lowest_sale["product"])
+
+    if total_sales > 100000:
+        print("Excellent Sales")
+    else:
+        print("Sales Need Improvement")
+
+
+analyze_sales(sales_data)
+
+
+
+
+
+
 
 
 
