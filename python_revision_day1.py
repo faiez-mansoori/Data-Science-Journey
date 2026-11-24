@@ -9465,6 +9465,86 @@ analyze_sales(sales_data)
 
 
 
+# ==================================================
+# DAY 25: ADVANCED SALES DATA ANALYSIS
+# Author: Faiez Mansoori
+# Date: 24-11-2026
+# Project: Data Science Journey
+# ==================================================
+
+sales_data = [
+    {"product": "Laptop", "sales": 55000, "quantity": 5},
+    {"product": "Mobile", "sales": 25000, "quantity": 10},
+    {"product": "Keyboard", "sales": 1500, "quantity": 15},
+    {"product": "Mouse", "sales": 800, "quantity": 20},
+    {"product": "Monitor", "sales": 12000, "quantity": 8}
+]
+
+
+def analyze_sales(data):
+
+    total_sales = 0
+    total_quantity = 0
+
+    print("\n================================")
+    print("       SALES ANALYSIS REPORT")
+    print("================================")
+
+    for item in data:
+
+        product = item["product"]
+        sales = item["sales"]
+        quantity = item["quantity"]
+
+        total_sales += sales
+        total_quantity += quantity
+
+        print("\nProduct:", product)
+        print("Sales: Rs.", sales)
+        print("Quantity:", quantity)
+
+        if sales >= 30000:
+            print("Performance: Excellent")
+
+        elif sales >= 10000:
+            print("Performance: Good")
+
+        else:
+            print("Performance: Average")
+
+    average_sales = total_sales / len(data)
+
+    highest_sale = max(data, key=lambda x: x["sales"])
+    lowest_sale = min(data, key=lambda x: x["sales"])
+
+    print("\n================================")
+    print("          FINAL RESULT")
+    print("================================")
+
+    print("Total Products:", len(data))
+    print("Total Quantity:", total_quantity)
+    print("Total Sales: Rs.", total_sales)
+    print("Average Sales: Rs.", round(average_sales, 2))
+
+    print("Top Product:", highest_sale["product"])
+    print("Lowest Product:", lowest_sale["product"])
+
+    if total_sales >= 100000:
+        print("Overall Result: Excellent Sales")
+    else:
+        print("Overall Result: Needs Improvement")
+
+    print("================================")
+
+
+analyze_sales(sales_data)
+
+
+
+
+
+
+
 
 
 
