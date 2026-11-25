@@ -9543,6 +9543,17 @@ analyze_sales(sales_data)
 
 
 
+git add python_revision_day1.py
+
+git commit -m "Add Student Study Hours Analysis"
+
+git push origin main
+
+git status
+
+
+
+
 
 
 
