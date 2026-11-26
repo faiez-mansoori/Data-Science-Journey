@@ -9558,6 +9558,99 @@ git status
 
 
 
+# ==================================================
+# DAY 26 NOVEMBER 2026
+# STUDENT PERFORMANCE DATA ANALYSIS
+# Created by: Faiez
+# ==================================================
+
+print("=" * 55)
+print("       STUDENT PERFORMANCE ANALYSIS SYSTEM")
+print("=" * 55)
+
+students = [
+    {"name": "Rahul", "marks": 85},
+    {"name": "Aman", "marks": 72},
+    {"name": "Faiez", "marks": 91},
+    {"name": "Priya", "marks": 64},
+    {"name": "Rohit", "marks": 38}
+]
+
+
+def calculate_grade(marks):
+    if marks >= 90:
+        return "A+"
+    elif marks >= 80:
+        return "A"
+    elif marks >= 70:
+        return "B"
+    elif marks >= 60:
+        return "C"
+    elif marks >= 40:
+        return "D"
+    else:
+        return "Fail"
+
+
+def analyze_students(data):
+    total_marks = 0
+    passed = 0
+    failed = 0
+
+    print("\nSTUDENT REPORT")
+    print("-" * 55)
+
+    for student in data:
+        name = student["name"]
+        marks = student["marks"]
+
+        grade = calculate_grade(marks)
+        total_marks += marks
+
+        if marks >= 40:
+            passed += 1
+        else:
+            failed += 1
+
+        print("Name:", name)
+        print("Marks:", marks)
+        print("Grade:", grade)
+        print("-" * 30)
+
+    average = total_marks / len(data)
+
+    highest = max(data, key=lambda x: x["marks"])
+    lowest = min(data, key=lambda x: x["marks"])
+
+    print("\nFINAL ANALYSIS")
+    print("=" * 55)
+
+    print("Total Students:", len(data))
+    print("Total Marks:", total_marks)
+    print("Average Marks:", round(average, 2))
+    print("Passed Students:", passed)
+    print("Failed Students:", failed)
+
+    print("Highest Scorer:", highest["name"])
+    print("Highest Marks:", highest["marks"])
+
+    print("Lowest Scorer:", lowest["name"])
+    print("Lowest Marks:", lowest["marks"])
+
+    print("=" * 55)
+    print("DATA ANALYSIS COMPLETED SUCCESSFULLY")
+
+
+analyze_students(students)
+
+
+
+
+
+
+
+
+
 
 
 
