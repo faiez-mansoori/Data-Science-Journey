@@ -9648,6 +9648,90 @@ analyze_students(students)
 
 
 
+# ==================================================
+# DAY 27 - NOVEMBER 27, 2026
+# Advanced Python Practice
+# Student Performance Data Analysis
+# ==================================================
+
+print("\n" + "=" * 55)
+print("       STUDENT PERFORMANCE ANALYSIS")
+print("=" * 55)
+
+students = [
+    {"name": "Faiez", "marks": [85, 90, 78]},
+    {"name": "Rahul", "marks": [72, 80, 75]},
+    {"name": "Aman", "marks": [90, 95, 88]},
+    {"name": "Sahil", "marks": [65, 70, 68]},
+    {"name": "Rohan", "marks": [55, 60, 58]}
+]
+
+total_students = len(students)
+class_total = 0
+topper = ""
+highest_average = 0
+
+print("\nSTUDENT REPORT")
+print("-" * 55)
+
+for student in students:
+
+    marks = student["marks"]
+    total = 0
+
+    for mark in marks:
+        total += mark
+
+    average = total / len(marks)
+    class_total += average
+
+    if average >= 85:
+        grade = "A"
+        result = "Excellent"
+
+    elif average >= 70:
+        grade = "B"
+        result = "Good"
+
+    elif average >= 50:
+        grade = "C"
+        result = "Average"
+
+    else:
+        grade = "D"
+        result = "Needs Improvement"
+
+    if average > highest_average:
+        highest_average = average
+        topper = student["name"]
+
+    print("\nName:", student["name"])
+    print("Marks:", marks)
+    print("Total:", total)
+    print("Average:", round(average, 2))
+    print("Grade:", grade)
+    print("Performance:", result)
+
+class_average = class_total / total_students
+
+print("\n" + "=" * 55)
+print("CLASS SUMMARY")
+print("=" * 55)
+
+print("Total Students:", total_students)
+print("Class Average:", round(class_average, 2))
+print("Class Topper:", topper)
+print("Highest Average:", highest_average)
+
+print("\nAnalysis Completed Successfully!")
+print("=" * 55)
+
+
+
+
+
+
+
 
 
 
