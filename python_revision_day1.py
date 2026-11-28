@@ -9738,6 +9738,105 @@ print("=" * 55)
 
 
 
+# ==================================================
+# DAY 28 - STUDENT PERFORMANCE ANALYSIS
+# Date: 28-11-2026
+# Developer: Faiez Mansoori
+# ==================================================
+
+print("=" * 55)
+print("       STUDENT PERFORMANCE ANALYSIS SYSTEM")
+print("=" * 55)
+
+students = {
+    "Faiez": 85,
+    "Rahul": 72,
+    "Aman": 90,
+    "Priya": 65,
+    "Karan": 48
+}
+
+
+def calculate_grade(marks):
+
+    if marks >= 90:
+        return "A+"
+    elif marks >= 80:
+        return "A"
+    elif marks >= 70:
+        return "B"
+    elif marks >= 60:
+        return "C"
+    elif marks >= 40:
+        return "D"
+    else:
+        return "Fail"
+
+
+def analyze_students(data):
+
+    total_marks = 0
+    highest_marks = 0
+    lowest_marks = 100
+
+    print("\nSTUDENT REPORT")
+    print("-" * 55)
+
+    for name, marks in data.items():
+
+        grade = calculate_grade(marks)
+
+        total_marks += marks
+
+        if marks > highest_marks:
+            highest_marks = marks
+
+        if marks < lowest_marks:
+            lowest_marks = marks
+
+        print("Name:", name)
+        print("Marks:", marks)
+        print("Grade:", grade)
+        print("-" * 30)
+
+    average = total_marks / len(data)
+
+    print("\nFINAL ANALYSIS")
+    print("-" * 55)
+    print("Total Students:", len(data))
+    print("Total Marks:", total_marks)
+    print("Average Marks:", average)
+    print("Highest Marks:", highest_marks)
+    print("Lowest Marks:", lowest_marks)
+
+
+analyze_students(students)
+
+print("\nAnalysis Completed Successfully!")
+print("=" * 55)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
